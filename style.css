@@ -1,0 +1,58 @@
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: #ffffff;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #1B1B1F;
+    }
+}
+
+#text{
+    text-align: center;
+    -webkit-text-stroke: 1px #FFF;
+    text-stroke: 1px #FFF;
+}
+
+textarea{
+    border: 3px greenyellow solid;
+    resize: none;
+    outline: none;
+    width: 50%;
+    height: 20em;
+    background-color: #1B1B1F;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+select{
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+    width: 205px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #1B1B1F;
+    color: #ffffff;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    background-color: #1B1B1F;
+    color: #ffffff;
+    background: transparent;
+    border: #ffffff 1px solid;
+    outline: none;
+    box-shadow: none;
+    font-size: 25px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/* ↓placeholderを白に */
+::placeholder {color: #ffffff;}::-ms-input-placeholder{color: #ffffff;}:-ms-input-placeholder{color: #ffffff;}
