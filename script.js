@@ -22,8 +22,32 @@ function submit(){
         window.open("https://" + instance + "/share?text=" + document.main.text.value)
         console.log("インスタンスの共有ページを新しいタブで開きました")
     }else if(service == "Threads"){
+        console.log("Threadsの処理を実行します")
         window.open("https://threads.net/intent/post?text=" + document.main.text.value)
+        console.log("Threadsの共有ページを新しいタブで開きました")
     }else if(service == "BlueSky"){
-        window.open()
+        console.log("BlueSkyの処理を実行します")
+        window.open("https://bsky.app/intent/compose?text=" + document.main.text.value)
+        console.log("BlueSkyの共有ページを新しいタブで開きました")
+    }else if(service == "X(旧Twitter)"){
+        console.log("X(旧Twitter)の処理を実行します")
+        window.open("https://x.com/intent/post?text=" + document.main.text.value)
+        console.log("X(旧Twitter)の共有ページを新しいタブで開きました")
+    }else if(service == "タイッツー"){
+        console.log("タイッツーの処理を実行します")
+        window.open("https://taittsuu.com/share?text=" + document.main.text.value)
+        console.log("タイッツーの共有ページを新しいタブで開きました")
+    }else if(service == "LINE"){
+        console.log("LINEの処理を実行します")
+        window.open("https://social-plugins.line.me/lineit/share?text=")
+        console.log("LINEの共有ページを新しいタブで開きました")
+    }else if(service == "Facebook"){
+        console.log("Facebookの処理を実行します")
+        window.open("https://www.facebook.com/sharer.php?u=" + document.main.text.value)
+        console.log("Facebookの共有ページを新しいタブで開きました")
+    }else if(service == "WhatsApp"){
+        console.log("WhatsAppの処理を実行します")
+        window.open("https://api.whatsapp.com/send/?text=" + document.main.text.value)
+        console.log("WhatsAppの共有ページを新しいタブで開きました")
     }
 }

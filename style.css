@@ -54,5 +54,34 @@ button{
     text-align: center;
 }
 
+img{
+    display: block;
+    margin: 0 auto;
+    width: 5%;
+    border-radius: 50px;
+}
+
+div{
+    background-color: #ffffff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+h3{
+    display: inline;
+    margin: 30px;
+}
+
 /* ↓placeholderを白に */
 ::placeholder {color: #ffffff;}::-ms-input-placeholder{color: #ffffff;}:-ms-input-placeholder{color: #ffffff;}
