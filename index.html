@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共有ツール</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./script.js"></script>
+</head>
+<body>
+    <h1 id="text">共有</h1>
+    <form name="main">
+    <textarea id="share" placeholder="共有する文字列を入力・・・" name="text"></textarea>
+    <br>
+    <select id="service">
+        <option name="line" value="LINE">LINE</option>
+        <option name="x" value="X(旧Twitter)">X(旧Twitter)</option>
+        <option name="taittsuu" value="タイッツー">タイッツー</option>
+        <option name="whatsapp" value="WhatsApp">WhatsApp</option>
+        <option name="threads" value="Threads">Threads</option>
+        <option name="facebook" value="Facebook">Facebook</option>
+        <option name="misskey" value="Misskey・Mastodon">Misskey・Mastodon</option>
+        <option name="bsky" value="BlueSky">BlueSky</option>
+    </select>
+    <br>
+    <button type="submit" id="btn" onclick="window.submit();">共有</button>
+    </form>
+</body>
+</html>
