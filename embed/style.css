@@ -33,7 +33,7 @@
     }
 
     code{
-        background-color: #eee;
+        background-color: #000;
         border-radius: 3px;
         font-family: courier, monospace;
         border: 1px black solid;
@@ -77,6 +77,7 @@
         background-color: #eee;
         border-radius: 3px;
         font-family: courier, monospace;
+        border: 1px #fff solid;
     }
 }
 

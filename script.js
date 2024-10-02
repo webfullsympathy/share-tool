@@ -1,7 +1,6 @@
 // ?text=の処理
 window.addEventListener('load', function(){
-let url_string = window.location.href;
-let url = new URL(url_string);
+let url = new URL(location.href);
 let data=url.searchParams.get("text");
 let area = document.querySelector("#share");
 area.value = data;
@@ -14,6 +13,13 @@ function submit(){
     const get_1 = document.getElementById("service");
     const get_2 = get_1.selectedIndex;
     const service = get_1.options[get_2].innerText;
+    async function other (){
+        try {
+            await navigator.share({text: document.main.text.value});
+        } catch (error) {
+            console.error(error);
+        }
+    }
     if (service == "Misskey・Mastodon"){
         console.log("Misskey・Mastodonの処理を実行します")
         console.log("インスタンスのドメイン・IPアドレスを要求中")
@@ -49,5 +55,9 @@ function submit(){
         console.log("WhatsAppの処理を実行します")
         window.open("https://api.whatsapp.com/send/?text=" + document.main.text.value)
         console.log("WhatsAppの共有ページを新しいタブで開きました")
+    }else if(service == "その他"){
+        console.log("その他の処理を実行します")
+        other()
+        console.log("その他の共有画面の表示を試みました。デバイスによっては実装されていない可能性があります。")
     }
 }
