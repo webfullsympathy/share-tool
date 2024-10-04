@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共有ツール</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://share-tool.vercel.app/src/share.jpg">
+    <link href="./style.css" rel="stylesheet">
+    <script src="https://share-tool.vercel.app/script.js"></script>
+</head>
+<body>
+    <img src="https://share-tool.vercel.app/src/share.jpg">
+    <h1 id="text">共有</h1>
+    <form name="main">
+    <textarea id="share" placeholder="共有する文字列を入力・・・" name="text"></textarea>
+    <br>
+    <select id="service">
+        <option>選択してください</option>
+        <option name="line" value="LINE">LINE</option>
+        <option name="x" value="X(旧Twitter)">X(旧Twitter)</option>
+        <option name="taittsuu" value="タイッツー">タイッツー</option>
+        <option name="whatsapp" value="WhatsApp">WhatsApp</option>
+        <option name="threads" value="Threads">Threads</option>
+        <option name="facebook" value="Facebook">Facebook</option>
+        <option name="misskey" value="Misskey・Mastodon">Misskey・Mastodon</option>
+        <option name="bsky" value="BlueSky">BlueSky</option>
+        <option name="other" value="その他">その他</option>
+    </select>
+    <br>
+    <button type="submit" id="btn" onclick="window.submit();">共有</button>
+    </form>
+    <div>
+        <nobr>
+            <a href="https://github.com/webfullsympathy/share-tool/blob/main/README.md"><h3>README・使い方</h3></a>
+        </nobr>
+    </div>
+</body>
+</html>
