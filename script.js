@@ -1,5 +1,5 @@
 // ?text=の処理
-window.addEventListener('load', function(){
+window.addEventListener("load",function(){
 let url = new URL(location.href);
 let data=url.searchParams.get("text");
 let area = document.querySelector("#share");
@@ -23,7 +23,7 @@ function submit(){
     if (service == "Misskey・Mastodon"){
         console.log("Misskey・Mastodonの処理を実行します")
         console.log("インスタンスのドメイン・IPアドレスを要求中")
-        var instance = prompt("インスタンスの ドメイン・IPアドレス を入力してください。");
+        const instance = prompt("インスタンスの ドメイン・IPアドレス を入力してください。\n例：misskey.ioやmastodon.socialなど");
         console.log("入力されました")
         window.open("https://" + instance + "/share?text=" + document.main.text.value)
         console.log("インスタンスの共有ページを新しいタブで開きました")
