@@ -16,6 +16,9 @@
 ## お知らせページ
 [こちら](https://flawless-pancake-f2b.notion.site/1166e1c012538078af71d00a6849647b)から制作者本人のお知らせを確認できます。
 
+# リンク集
+リンク集は[こちら](https://lit.link/sharetool)
+
 # お問い合わせ先
 お問い合わせは[このリンク](https://lit.link/webfullsympathy)にウェブ完理のSNSを全て表記しています。
 また、すべてのSNSでDMを解放しているのでお気軽にお問い合わせください。GitHubでのIssuesでもお問い合わせが可能です。
