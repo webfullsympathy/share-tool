@@ -1,5 +1,5 @@
 function resizeWindow(){
-    if (screen.availWidth < screen.availHeight){
+    if (window.outerWidth < window.outerHeight){
         const url = new URL(location.href)
         const move_data =url.searchParams.get("text")
         if (location.href.includes("/m")){
