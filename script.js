@@ -2,8 +2,10 @@
 window.addEventListener("load",function(){
     let url = new URL(location.href);
     let data=url.searchParams.get("text");
-    let area = document.querySelector("#share");
-    area.value = data;
+    if(!data == null){
+        let area = document.querySelector("#share");
+        area.value = data;
+    }
 })
 
 console.log("コンソールではエラー用に色々ログを出しています。")
