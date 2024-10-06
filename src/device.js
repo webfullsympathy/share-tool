@@ -11,7 +11,7 @@ function resizeWindow(){
         tate = window.outerHeight
         yoko = window.outerWidth
     }
-    if (tate < yoko){
+    if (tate > yoko){
         const url = new URL(location.href)
         const move_data =url.searchParams.get("text")
         if (location.href.includes("/m")){
