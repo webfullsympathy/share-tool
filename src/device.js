@@ -1,7 +1,7 @@
 window.addEventListener("load",function(){
 function resizeWindow(){
-    let url = new URL(location.href)
-    let visi=url.searchParams.get("visi")
+    let url_device = new URL(location.href)
+    let visi=url_device.searchParams.get("visi")
     var tate
     var yoko
     if(visi == "os"){
