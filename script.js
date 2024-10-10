@@ -2,7 +2,7 @@
 window.addEventListener("load",function(){
     let url = new URL(location.href);
     let data=url.searchParams.get("text");
-    if(data == null || data == "null"){}else{
+    if(data == null){}else{
         let area = document.querySelector("#share");
         area.value = data;
     }
