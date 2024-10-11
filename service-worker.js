@@ -1,4 +1,4 @@
-const cacheFiles = ["index.html", "script.js","style.css","src/share.jpg","src/device.js","404.png","m/index.html","m/style.css","service-worker.js"]
+const cacheFiles = ["offline.html","offline.js","offline.css","src/share.jpg"]
 const cacheName = "v4.0.1"
 self.addEventListener("install", event => {
     caches.open(cacheName).then(cache => cache.addAll(cacheFiles))

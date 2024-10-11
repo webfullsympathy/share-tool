@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: light){
+    body{
+        background-color: #ffffff;
+    }
+    h1,h3{
+        text-align: center;
+        color: black;
+    }
+}
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #1b1b1b;
+    }
+    h1,h3{
+        text-align: center;
+        color: white;
+    }
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 200px;
+    width: 30%;
+}

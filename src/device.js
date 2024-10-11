@@ -1,4 +1,7 @@
 window.addEventListener("load",function(){
+if(!navigator.onLine){
+    location.href = "ofline.html"
+}
 function resizeWindow(){
     let url_device = new URL(location.href)
     let visi=url_device.searchParams.get("visi")
