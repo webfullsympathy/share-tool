@@ -76,6 +76,11 @@
         margin: 30px;
     }
     
+    #install{
+        text-align: center;
+        color: black;
+    }
+
     /* ↓placeholderを黒に */
     ::placeholder {color: black;}::-ms-input-placeholder{color: black;}:-ms-input-placeholder{color: black;}
 }
@@ -156,6 +161,11 @@
     h3{
         display: inline;
         margin: 30px;
+    }
+
+    #install{
+        text-align: center;
+        color: white;
     }
     
     /* ↓placeholderを白に */

@@ -1,7 +1,20 @@
-const cacheFiles = ["index.html", "script.js","style.css","src/share.jpg","src/device.js","404.png","m/index.html","m/style.css"]
-const cacheName = "v1"
+const cacheFiles = ["index.html", "script.js","style.css","src/share.jpg","src/device.js","404.png","m/index.html","m/style.css","service-worker.js"]
+const cacheName = "v4.0.1"
 self.addEventListener("install", event => {
     caches.open(cacheName).then(cache => cache.addAll(cacheFiles))
+})
+self.addEventListener("activate", event => {
+    event.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(
+                keys.filter(key => {
+                    return !cacheName.includes(key)
+                }).map(key => {
+                    return caches.delete(key)
+                })
+            )
+        })
+    )
 })
 self.addEventListener("fetch", event => {
     event.respondWith(
@@ -14,6 +27,6 @@ self.addEventListener("fetch", event => {
         return response
     })
 }).catch(function() {
-    return caches.match("logo.svg")
+    return caches.match("src/share.jpg")
 }))
 })

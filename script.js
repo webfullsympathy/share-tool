@@ -61,6 +61,16 @@ function submit(){
     }else if(service == "その他"){
         console.log("その他の処理を実行します")
         other()
-        console.log("その他の共有画面の表示を試みました。デバイスによっては実装されていない可能性があります。")
+        console.log("その他の共有画面の表示を試みました\nデバイスによっては実装されていない可能性があります")
+    }else if(service == "コピー"){
+        console.log("コピーします")
+        if (!navigator.clipboard) {
+            window.alert("お使いのブラウザにコピー機能が実装されていません。\n最新にアップデートするか標準ブラウザなどの比較的新しいブラウザをご利用ください。")
+        }
+        navigator.clipboard.writeText(document.main.text.value).then(
+            () => {window.alert("コピーしました！")},
+            () => {window.alert("コピーできませんでした。")}
+        )
+        console.log("コピーを試みました")
     }
 }

@@ -11,6 +11,7 @@
     <meta name="google-site-verification" content="6i5qzMv5tTje_n0lSnR3r31QPJhCbDniRQ8gXJ2TZZ4">
     <!--以下PWA-->
     <script src="pwa.js"></script>
+    <script src="install.js"></script>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -65,11 +66,13 @@
         <option name="facebook" value="Facebook">Facebook</option>
         <option name="misskey" value="Misskey・Mastodon">Misskey・Mastodon</option>
         <option name="bsky" value="BlueSky">BlueSky</option>
+        <option name="copy" value="コピー">コピー</option>
         <option name="other" value="その他">その他</option>
     </select>
     <br>
     <button type="submit" id="btn" onclick="window.submit();">共有</button>
     </form>
+    <a href="javascript:install()"><p id="install">インストールはこちら</p></a>
     <div>
     <nobr>
         <a href="https://github.com/webfullsympathy/share-tool"><h3>GitHubで見る</h3></a>
