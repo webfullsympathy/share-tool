@@ -24,6 +24,10 @@ VisiOS
 [ダウンロード](https://drive.google.com/file/d/1cvxKbwBtlVXBM7vIRLsMlVO4ywFzf7b5/view)
 ※アップデートは自動的に行われます。
 
+PWA
+[ダウンロード](https://share-tool.vercel.app)
+※共有ボタンの下にあるインストールバナーをクリック
+
 # お知らせ
 ## X(旧Twitter)でのお知らせ
 [こちら](https://x.com/search?q=from%3Awebfullsympathy+%23%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB_%E3%82%A6%E3%82%A7%E3%83%96%E5%AE%8C%E7%90%86)から制作者本人のみのお知らせを確認できます。
