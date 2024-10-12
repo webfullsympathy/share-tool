@@ -6,6 +6,7 @@
     <title>PWAインストール</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="https://share-tool.vercel.app/src/share.jpg">
     <!--以下PWA-->
 <link rel="manifest" href="https://share-tool.vercel.app/manifest.json">
 <link rel="apple-touch-icon" href="https://share-tool.vercel.app/icons/apple-icon-180.png">
@@ -46,6 +47,6 @@
 <link rel="apple-touch-startup-image" href="https://share-tool.vercel.app/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 </head>
 <body>
-    <button value="インストールされない方はこちら" onclick="install()" type="submit">インストールされない方はこちら</button>
+    <a href="javascript:install()"><button id="install">インストールされない方はこちら</button></a>
 </body>
 </html>

@@ -1,6 +1,6 @@
 var installPromptEvent
 
-
+window.addEventListener("load", (e) =>{
 window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault()
     installPromptEvent = event
@@ -18,5 +18,5 @@ function install(){
         installPromptEvent = null
     })
 }
-
 install()
+})
