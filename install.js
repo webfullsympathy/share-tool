@@ -1,5 +1,4 @@
-var installPromptEvent
-
+let installPromptEvent;
 
 window.addEventListener("beforeinstallprompt", (event) => {
     event.preventDefault()

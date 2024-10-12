@@ -8,6 +8,10 @@ window.addEventListener("load",function(){
     }
 })
 
+if(choiceResult.outcome == "accepted"){
+    document.getElementById("install").style.display = "none"
+}
+
 console.log("コンソールではエラー用に色々ログを出しています。")
 
 function submit(){
