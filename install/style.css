@@ -1,0 +1,36 @@
+@media (prefers-color-scheme: light){
+    body{
+        background-color: white;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        background-color: #ffffff;
+        color: black;
+        background: transparent;
+        border: black 1px solid;
+        outline: none;
+        box-shadow: none;
+        font-size: 25px;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #1b1b1b;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        background-color: #1B1B1F;
+        color: #ffffff;
+        background: transparent;
+        border: #ffffff 1px solid;
+        outline: none;
+        box-shadow: none;
+        font-size: 25px;
+        border-radius: 30px;
+        text-align: center;
+    }
+}

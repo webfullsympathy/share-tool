@@ -18,3 +18,5 @@ function install(){
         installPromptEvent = null
     })
 }
+
+install()
