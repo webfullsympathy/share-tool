@@ -36,7 +36,7 @@ PWA
 # お知らせ
 
 ## X(旧Twitter)でのお知らせ
-[こちら](https://x.com/search?q=from%3Awebfullsympathy+%23%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB_%E3%82%A6%E3%82%A7%E3%83%96%E5%AE%8C%E7%90%86)から制作者のリーダー(ウェブ完理)のみのお知らせを確認できます。
+[こちら](https://x.com/search?q=%23%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB_%E3%82%A6%E3%82%A7%E3%83%96%E5%AE%8C%E7%90%86)から制作グループのみのお知らせを確認できます。
 
 ## お知らせページ
 [こちら](https://flawless-pancake-f2b.notion.site/1166e1c012538078af71d00a6849647b)から制作者本人のお知らせを確認できます。
@@ -55,6 +55,7 @@ PWA
 
 # うまいだんご(共同編集者)
 ・[ホームページ](https://umaidango.github.io/me/)
+
 ・[X(旧Twitter)](https://x.com/dango12_dango)
 
 ## 制作者：[ウェブ完理](https://webfullsympathy.github.io/)
