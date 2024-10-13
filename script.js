@@ -78,3 +78,10 @@ function submit(){
         console.log("コピーを試みました")
     }
 }
+
+
+
+//splash
+let id = window.setTimeout(function(){
+    document.getElementById("splash").style.display = 'none';
+}, 200);
