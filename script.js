@@ -80,6 +80,3 @@ function submit(){
 }
 
 
-
-//splash
-    document.getElementById("splash").style.display = 'none';
