@@ -59,3 +59,4 @@ PWA
 ・[X(旧Twitter)](https://x.com/dango12_dango)
 
 ## 制作者：[ウェブ完理](https://webfullsympathy.github.io/)
+## 共同編集者：[うまいだんご](https://umaidango.github.io/me/)
