@@ -82,6 +82,6 @@ function submit(){
 
 
 //splash
-let id = window.setTimeout(function(){
+setTimeout(() => {
     document.getElementById("splash").style.display = 'none';
-}, 200);
+}, 400);
