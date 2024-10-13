@@ -18,6 +18,8 @@
         color: #1B1B1F;
         display: block;
         margin: 0 auto;
+        border-radius:8px;
+        
     }
     
     select{
