@@ -48,7 +48,14 @@
 <link rel="apple-touch-startup-image" href="https://share-tool.vercel.app/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 </head>
 <body>
-    <img src="https://share-tool.vercel.app/src/share.jpg">
+    <!--スプラッシュ-->
+    <div id="splash">
+        <img id="splash_img" src="src/share.jpg">
+    </div>
+    <div style="background: #ffffff2e;padding-left: 15px;margin-left: -10px;margin-right: -8px;margin-top: -10px;position: unset;/*! left: 0; *//*! bottom: 0; */width: 100%;color: black;display: block;margin-bottom: 50px;">
+        <img src="src/share.jpg" style="display: inline-block;margin: 5px;vertical-align: -70%;">
+        <span id="text" style="font-size: 18px;">Share Tool</span>
+    </div>
     <h1 id="text">共有</h1>
     <form name="main">
     <textarea id="share" placeholder="共有する文字列を入力・・・" name="text"></textarea>
