@@ -6,11 +6,10 @@ window.addEventListener("load",function(){
         let area = document.querySelector("#share");
         area.value = data;
     }
+    if(choiceResult.outcome == "accepted"){
+        document.getElementById("install").style.display = "none"
+    }
 })
-
-if(choiceResult.outcome == "accepted"){
-    document.getElementById("install").style.display = "none"
-}
 
 console.log("コンソールではエラー用に色々ログを出しています。")
 
