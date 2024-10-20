@@ -1,5 +1,5 @@
 body{
-    background-color: #5da0ff;
+    background-color: #5da0ff4f; 
 }
 #welcome_text{
     font-size: 300%;
@@ -11,4 +11,9 @@ body{
 #icon{
     width: 10%;
     border-radius: 60px;
+}
+
+#box_1{
+    background: aliceblue;
+    padding: 20px;
 }

@@ -13,8 +13,11 @@ function doc(title){
     fetch("https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/doc/" + title + ".txt")
     .then(response => response.text())
     .then(data => {
-        document.getElementById("doc-view").style.display = "block"
-        document.getElementById("doc-view").innerHTML = data + "<br><button onclick='doc_close()' style='background-color: #1F2937;color: #ffffff;font-size: 140%;'>閉じる</button>"
+        document.getElementById("doc-view").style.display = "block";
+        document.getElementById("doc-view").style.border = "1px #eee solid";
+        document.getElementById("doc-view").style.borderradius = "1px #eee solid";
+        document.getElementById("doc-view").style.background = "#fff";
+        document.getElementById("doc-view").innerHTML = data + "<br><button onclick='doc_close()' style='background-color: #1F2937;color: #ffffff;font-size: 140%;'>閉じる</button>";
     })
 }
 data_fetch()

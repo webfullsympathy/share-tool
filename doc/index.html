@@ -8,7 +8,7 @@
     <meta http-equiv="Expires" content="0">
     <title>共有ツール ドキュメント</title>
     <link rel="icon" href="https://share-tool.vercel.app/src/share.jpg">
-    <link rel="stylesheet" href="https://share-tool.vercel.app/doc/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://share-tool.vercel.app/src/device.js"></script>
     <!--以下PWA-->
 <link rel="manifest" href="https://share-tool.vercel.app/manifest.json">
@@ -50,16 +50,29 @@
 <link rel="apple-touch-startup-image" href="https://share-tool.vercel.app/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 </head>
 <body>
+    <nav>
     <div>
         <img src="https://share-tool.vercel.app/src/share.jpg" id="icon">
+        <span id="logo_text">Share Tool Document</span>
         <span id="welcome_text">共有ツール ドキュメントへようこそ！</span>
     </div>
+    </nav>
     <h1>このドキュメントについて</h1>
-    <h3>このドキュメントは公式です。<br>安心してご利用ください。<br>また、誤字やその他修正点などを見つけた場合はウェブ完理かうまいだんごまでお問い合わせください。</h3>
+
+    <div id="box_1"><span>
+        このドキュメントは公式です。<br>安心してご利用ください。<br>また、誤字やその他修正点などを見つけた場合はウェブ完理かうまいだんごまでお問い合わせください。
+    </span>
+    </div>
+
+    <dialog>
+        <div></div>
+    </dialog>
     <h1>記事一覧</h1>
     <h3 id="doc-all"><img src="https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/load.gif" alt="load" width="10%"></h3>
     <br style="margin-top: 10%">
     <div id="doc-view"><img src="https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/load.gif" alt="load" width="10%"></div>
+
+    <div><footer>(c) 2024 - 共有ツール ウェブ完理、うまいだんご</footer></div>
     <script src="https://share-tool.vercel.app/doc/script.js"></script>
 </body>
 </html>
