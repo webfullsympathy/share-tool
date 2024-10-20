@@ -16,22 +16,13 @@
 ・[うまいだんご](#うまいだんご共同編集者)
 
 # ダウンロード
-Windows
-[未完成]()
-
-Mac
-[持ってない]()
-
-Linux
-[未完成]()
-
-VisiOS
-[ダウンロード](https://drive.google.com/file/d/1cvxKbwBtlVXBM7vIRLsMlVO4ywFzf7b5/view)
-※アップデートは自動的に行われます。
-
-PWA
-[ダウンロード](https://share-tool.vercel.app)
-※共有ボタンの下にあるインストールバナーをクリック
+|OS/種類|リンク|備考|
+|-|-|-|
+|Windows|[未完成]()|なし|
+|Mac|[未完成]()|なし|
+|Linux|[未完成]()|なし|
+|VisiOS|[ダウンロード](https://drive.google.com/file/d/1cvxKbwBtlVXBM7vIRLsMlVO4ywFzf7b5/view)|※常に最新版です。|
+|PWA|[ダウンロード](https://share-tool.vercel.app)|※共有ボタンの下にある<br>インストールバナーをクリック|
 
 # お知らせ
 
