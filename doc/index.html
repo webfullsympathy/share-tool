@@ -2,10 +2,14 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>埋め込みコード</title>
-    <link rel="icon" type="image/vnd.microsoft.icon" href="https://share-tool.vercel.app/src/share.jpg">
-    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>共有ツール ドキュメント</title>
+    <link rel="icon" href="https://share-tool.vercel.app/src/share.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <script src="https://share-tool.vercel.app/src/device.js"></script>
     <!--以下PWA-->
 <link rel="manifest" href="https://share-tool.vercel.app/manifest.json">
@@ -47,20 +51,15 @@
 <link rel="apple-touch-startup-image" href="https://share-tool.vercel.app/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 </head>
 <body>
-    <!--スプラッシュ-->
-    <div style="background: #ffffff2e;padding-left: 15px;margin-left: -10px;margin-right: -8px;margin-top: -10px;position: unset;/*! left: 0; *//*! bottom: 0; */width: 100%;color: black;display: block;margin-bottom: 50px;">
-        <img src="https://share-tool.vercel.app/src/share.jpg" style="display: inline-block;margin: 5px;vertical-align: -70%;">
-        <span id="text" style="font-size: 18px;">Share Tool</span>
-    </div>
-    <h1 id="text">埋め込みコード</h1>
-    <h2 id="text">以下のHTMLコードを自身のページに貼り付けてください。</h2>
-    <code>
-        &lt;a&nbsp;href='https://share-tool.vercel.app?text=ここに共有したいテキストを入力'&gt;&lt;img src='https://share-tool.vercel.app/src/share.jpg' style='border-radius: 50px;'&gt;&lt;/a&gt;
-    </code>
     <div>
-        <nobr>
-            <a href="https://github.com/webfullsympathy/share-tool/blob/main/README.md"><h3>README・使い方</h3></a>
-        </nobr>
+        <img src="https://share-tool.vercel.app/src/share.jpg" id="icon">
+        <span id="welcome_text">共有ツール ドキュメントへようこそ！</span>
     </div>
+    <h1>このドキュメントについて</h1>
+    <h3>このドキュメントは公式です。<br>安心してご利用ください。<br>また、誤字やその他修正点などを見つけた場合はウェブ完理かうまいだんごまでお問い合わせください。</h3>
+    <h1>記事一覧</h1>
+    <h3 id="doc-all"><img src="https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/load.gif" alt="load" width="10%"></h3>
+    <br style="margin-top: 10%">
+    <div id="doc-view"><img src="https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/load.gif" alt="load" width="10%"></div>
 </body>
 </html>

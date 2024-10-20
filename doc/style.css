@@ -1,0 +1,14 @@
+body{
+    background-color: #5da0ff;
+}
+#welcome_text{
+    font-size: 300%;
+    font-weight: bold;
+}
+#doc-view{
+    display: none;
+}
+#icon{
+    width: 10%;
+    border-radius: 60px;
+}
