@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: light) {
     body{
         background-color: #ffffff;
-        font-family: M PLUS 2;
+        font-family: "M PLUS 2", sans-serif;
     }
     #text{
         text-align: center;
