@@ -96,6 +96,7 @@
 @media (prefers-color-scheme: dark) {
     body{
         background-color: #1B1B1F;
+        font-family: "M PLUS 2", sans-serif;
     }
 
     #text{
