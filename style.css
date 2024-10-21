@@ -185,7 +185,7 @@
 }
 
 #menu{
-  display: none;
+  display: inline-block;
   width: 48px;
   vertical-align: -46%;
   cursor: pointer;
