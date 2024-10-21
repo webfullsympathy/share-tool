@@ -6,6 +6,7 @@
         text-align: center;
         -webkit-text-stroke: 1px #000;
         text-stroke: 1px #000;
+        vertical-align: 15%;
     }
     
     textarea{
@@ -182,3 +183,11 @@
     transform: translate(-50%, -50%);
     width: 15%;
 }
+
+#menu{
+  display: none;
+  width: 48px;
+  vertical-align: -46%;
+  cursor: pointer;
+}
+
