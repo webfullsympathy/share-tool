@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head prefix="og: https://ogp.me/ns#">
+<html lang="ja"><head prefix="og: https://ogp.me/ns#">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-41BP06FEPS"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-41BP06FEPS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -79,7 +78,7 @@
     <form name="main">
     <textarea id="share" placeholder="共有する文字列を入力・・・" name="text"></textarea>
     <br>
-    <select id="service">
+    <select id="service" style="border: 3px #eee solid;padding: 5px 30px 0px 20px;font-size: 16px;height: 45px;">
         <option>選択してください</option>
         <option name="line" value="LINE">LINE</option>
         <option name="x" value="X(旧Twitter)">X(旧Twitter)</option>
@@ -93,7 +92,7 @@
         <option name="other" value="その他">その他</option>
     </select>
     <br>
-    <button type="submit" id="btn" onclick="window.submit();">共有</button>
+    <button type="submit" id="btn" onclick="window.submit();" style="border: 3px #eee solid;padding: 4px 30px 1px 30px;">共有</button>
     </form>
     <a href="javascript:install()"><p id="install">インストールはこちら</p></a>
     <div style="background: none;display: block;height: 3vh;position: unset;"></div>
@@ -121,10 +120,11 @@
   <a class="menu_a" href="https://lit.link/sharetool"><li>リンク集</li></a>
   </ul></div>
     </div>
-</body>
+
 <script> 
     setTimeout(() => {
         document.getElementById("splash").style.display = 'none';
             }, 800); // 5秒後に中断
             </script>
-</html>
+
+</body></html>
