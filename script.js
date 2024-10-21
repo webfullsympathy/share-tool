@@ -83,12 +83,12 @@ function submit(){
 
 function menu_open()
 {
-    const menubar = document.getElementById("menu");
+    const menubar = document.getElementById("menu_window");
     menubar.style.display = "block";
 }
 
 function menu_close()
 {
-    const menubar = document.getElementById("menu");
+    const menubar = document.getElementById("menu_window");
     menubar.style.display = "none";
 }
