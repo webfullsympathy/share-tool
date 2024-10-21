@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: light) {
     body{
         background-color: #ffffff;
+        font-family: M PLUS 2;
     }
     #text{
         text-align: center;
