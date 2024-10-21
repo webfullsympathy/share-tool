@@ -57,7 +57,7 @@
         border-radius: 50px;
     }
     
-    div{
+    /*div{
         background-color: black;
         position: fixed;
         left: 0;
@@ -67,6 +67,7 @@
         display: flex;
         justify-content: center;
     }
+        */
     
     a{
         outline: none;
@@ -143,7 +144,7 @@
         width: 5%;
         border-radius: 50px;
     }
-    
+    /*
     div{
         background-color: #ffffff;
         position: fixed;
@@ -153,7 +154,7 @@
         color: black;
         display: flex;
         justify-content: center;
-    }
+    }*/
     
     a{
         outline: none;
@@ -191,3 +192,23 @@
   cursor: pointer;
 }
 
+#menu_window{
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px #fff;
+    padding: 30px;
+    position: fixed;
+    top: 30px;
+    width: 60%;
+    background:#fff;
+}
+
+
+
+
+
+div ul{
+    color:#fff;
+    list-style: none;
+
+}
