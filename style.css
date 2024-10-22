@@ -90,6 +90,14 @@
         color: black;
     }
 
+    .menu_open{
+        mix-blend-mode: difference;
+    }
+
+    .menu_a{
+        mix-blend-mode: difference;
+    }
+    
     /* ↓placeholderを黒に */
     ::placeholder {color: black;}::-ms-input-placeholder{color: black;}:-ms-input-placeholder{color: black;}
 }
@@ -192,10 +200,10 @@
 }
 
 #menu{
-  display: inline-block;
-  width: 48px;
-  vertical-align: -46%;
-  cursor: pointer;
+    display: inline-block;
+    width: 48px;
+    vertical-align: -46%;
+    cursor: pointer;
 }
 
 #menu_window{
@@ -209,12 +217,21 @@
     background:#fff;
 }
 
-
-
-
-
 div ul{
     color:#fff;
     list-style: none;
+}
 
+#header{
+    background: #ffffff2e;
+    padding-left: 15px;
+    margin-left: -10px;
+    margin-right: -8px;
+    margin-top: -10px;
+    position: unset;
+    /*! left: 0; *//*! bottom: 0; */
+    width: 100%;
+    color: black;
+    display: block;
+    margin-bottom: 50px;
 }
