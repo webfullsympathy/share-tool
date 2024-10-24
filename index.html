@@ -24,7 +24,7 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="./src/share.jpg">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
-        </style>
+    </style>
     <link href="./style.css" rel="stylesheet">
     <script src="./script.js"></script>
     <script src="./src/device.js"></script>
@@ -70,8 +70,8 @@
 </head>
 <body>
     <!--スプラッシュ-->
-    <div style="background: #ffffff2e;padding-left: 15px;margin-left: -10px;margin-right: -8px;margin-top: -10px;position: unset;/*! left: 0; *//*! bottom: 0; */width: 100%;color: black;display: block;margin-bottom: 50px;">
-        <img onclick="menu_open()" src="menu.svg" id="menu">
+    <div id="header">
+        <img onclick="menu_open()" src="menu.svg" id="menu" class="menu_open">
         <img src="src/share.jpg" style="display: inline-block;margin: 5px;vertical-align: -70%; width: 48px;">
         <span id="text" style="font-size: 18px;">Share Tool</span>
     </div>
@@ -96,22 +96,12 @@
     </form>
     <a href="javascript:install()"><p id="install">インストールはこちら</p></a>
     <div style="background: none;display: block;height: 3vh;position: unset;"></div>
-    <!--<div>
-        <nobr>
-            <a href="https://github.com/webfullsympathy/share-tool"><h3>GitHubで見る</h3></a>
-            <a href="./embed"><h3>埋め込みコードはこちら</h3></a>
-            <a href="https://share-tool.vercel.app/doc"><h3>ドキュメント</h3></a>
-            <a href="https://lit.link/sharetool"><h3>リンク集</h3></a>
-        </nobr>
-    </div>
-    -->
     <div id="menu_window" style="display: none;">
         <h3 style="margin-left: -25px;">
-            <span src="menu.svg" id="menu" onclick="menu_close()" style="font-size: 32px;vertical-align: 25%;">
-                ✕
-            </span>
+            <span src="menu.svg" id="menu" onclick="menu_close()" style="font-size: 32px;vertical-align: 25%;">✕</span>
             Share Tool Menu
         </h3>
+<<<<<<< HEAD
 <div>
 
 
@@ -134,3 +124,16 @@
             </script>
 
 </body></html>
+=======
+        <div>
+            <ul>
+                <a class="menu_a" href="https://github.com/webfullsympathy/share-tool"><li>GitHubで見る</li></a>
+                <a class="menu_a" href="./embed"><li>埋め込みコードはこちら</li></a>
+                <a class="menu_a" href="https://share-tool.vercel.app/doc"><li>ドキュメント</li></a>
+                <a class="menu_a" href="https://lit.link/sharetool"><li>リンク集</li></a>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+>>>>>>> 1055d7490c30e77a9c7c217403d34f3704e7c887
