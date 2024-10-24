@@ -218,12 +218,11 @@
     z-index: 5;
 }
 
-<<<<<<< HEAD
 
 #back_menu{
     z-index: 4;
     background: #000;
-    opacity: 0.5;
+    opacity: 0.8;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -233,8 +232,6 @@
 }
 
 
-=======
->>>>>>> 1055d7490c30e77a9c7c217403d34f3704e7c887
 div ul{
     color:#fff;
     list-style: none;
