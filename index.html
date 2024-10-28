@@ -3,6 +3,24 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <!--Firebase SDK-->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCIBQFib2vGVouVQRIOvggmxpgRkcZwuy0",
+            authDomain: "sharetool-dev.firebaseapp.com",
+            projectId: "sharetool-dev",
+            storageBucket: "sharetool-dev.appspot.com",
+            messagingSenderId: "1060368462957",
+            appId: "1:1060368462957:web:3d8d64bb8f754d4deb7b64"
+        }
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-41BP06FEPS"></script>
     <script>
