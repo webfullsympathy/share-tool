@@ -1,4 +1,3 @@
-<style>
 @media (prefers-color-scheme: light) {
     * {
         box-sizing: border-box;
@@ -79,6 +78,10 @@
         font-size: 25px;
         border-radius: 30px;
         text-align: center;
+    }
+
+    button{
+        cursor: pointer;
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -174,28 +177,3 @@
 #setting_view{
     user-select: none
 }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-<script>
-    function data_save(){
-        const check = document.getElementById("line")
-        if(check.checked){
-            Cookies.set("line",String(check.checked))
-        }
-    }
-</script>
-<h1>共有サービス</h1>
-<p>共有画面に表示するサービスを選択できます。<br>オフにしたものは非表示になります。<br>左：オフ<br>右：オン</p>
-
-<label><input type="checkbox" id="line">LINE</label><br>
-<label><input type="checkbox" id="x">X(旧Twitter)</label><br>
-<label><input type="checkbox" id="taittsuu">タイッツー</label><br>
-<label><input type="checkbox" id="whatsapp">WhatsApp</label><br>
-<label><input type="checkbox" id="threads">Threads</label><br>
-<label><input type="checkbox" id="facebook">Facebook</label><br>
-<label><input type="checkbox" id="misskey">Misskey・Mastodon</label><br>
-<label><input type="checkbox" id="bsky">Bluesky</label><br>
-<label><input type="checkbox" id="copy">コピー</label><br>
-<label><input type="checkbox" id="other">その他</label><br>
-
-<button id="save" onclick="data_save()">保存</button>

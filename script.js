@@ -78,19 +78,14 @@ function submit(){
     }
 }
 
-
-
-
-function menu_open()
-{
+function menu_open(){
     const menubar = document.getElementById("menu_window");
     const back = document.getElementById("back_menu");
     menubar.style.display = "block";
     back.style.display = "block";
 }
 
-function menu_close()
-{
+function menu_close(){
     const menubar = document.getElementById("menu_window");
     const back = document.getElementById("back_menu");
     menubar.style.display = "none";
