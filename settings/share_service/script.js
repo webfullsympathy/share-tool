@@ -63,34 +63,34 @@ if(Cookies.get("other") == "true"){
 
 function data_save(){
     var check = document.getElementById("line")
-    Cookies.set("line",String(check.checked))
+    Cookies.set("line",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("x")
-    Cookies.set("x",String(check.checked))
+    Cookies.set("x",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("taittsuu")
-    Cookies.set("taittsuu",String(check.checked))
+    Cookies.set("taittsuu",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("whatsapp")
-    Cookies.set("whatsapp",String(check.checked))
+    Cookies.set("whatsapp",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("threads")
-    Cookies.set("threads",String(check.checked))
+    Cookies.set("threads",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("facebook")
-    Cookies.set("facebook",String(check.checked))
+    Cookies.set("facebook",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("misskey")
-    Cookies.set("misskey",String(check.checked))
+    Cookies.set("misskey",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("bsky")
-    Cookies.set("bsky",String(check.checked))
+    Cookies.set("bsky",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("copy")
-    Cookies.set("copy",String(check.checked))
+    Cookies.set("copy",String(check.checked),{ expires: 2147483647 })
 
     check = document.getElementById("other")
-    Cookies.set("other",String(check.checked))
+    Cookies.set("other",String(check.checked),{ expires: 2147483647 })
 
     if(Cookies.get("his") != "true"){
         Cookies.set("his","true")
