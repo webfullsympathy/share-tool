@@ -1,0 +1,201 @@
+<style>
+@media (prefers-color-scheme: light) {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        color: #0c0c0d;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    input {
+        border: 1px solid #0c0c0d4d;
+        color: #737373;
+        display: inline-block;
+        margin: 0 4px;
+    }
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #0c0c0d1a;
+        border-radius: 8px;
+        height: 16px;
+        width: 32px;
+    }
+    input[type="checkbox"]:hover {
+        background-color: #0c0c0d33;
+        border-color: #0c0c0d7f;
+    }
+    input[type="checkbox"]:active {
+        background-color: #0c0c0d4d;
+    }
+    input[type="checkbox"]:focus {
+        box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff, 0 0 0 4px #0a84ff4d;
+    }
+    input[type="checkbox"]:checked {
+        background-color: #0060df;
+        border-color: #0060df;
+    }
+    input[type="checkbox"]::before {
+        background-color: currentColor;
+        border-radius: 6px;
+        content: "";
+        display: inline-block;
+        height: 12px;
+        margin-left: 1px;
+        margin-top: 1px;
+        transition: margin-left .2s cubic-bezier(.07, .95, 0, 1);
+        width: 12px;
+    }
+    input[type="checkbox"]:checked::before {
+        background-color: #ffffff;
+        margin-left: 17px;
+    }
+
+    input[type="checkbox"].text {
+        position: relative;
+    }
+    input[type="checkbox"].text::after {
+        content: attr(data-text-off);
+        font-size: 8px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+    }
+    input[type="checkbox"].text:checked::after {
+        color: #ffffff;
+        content: attr(data-text-on);
+        left: 2px;
+        right: auto;
+    }
+
+    button{
+        background-color: #ffffff;
+        color: black;
+        background: transparent;
+        border: black 1px solid;
+        outline: none;
+        box-shadow: none;
+        font-size: 25px;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        color: #0c0c0d;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    input {
+        border: 1px solid #0c0c0d4d;
+        color: #737373;
+        display: inline-block;
+        margin: 0 4px;
+    }
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #ffffff;
+        border-radius: 8px;
+        height: 16px;
+        width: 32px;
+    }
+    input[type="checkbox"]:hover {
+        background-color: #ffffff;
+        border-color: #0c0c0d4d;
+    }
+    input[type="checkbox"]:active {
+        background-color: #ffffff;
+    }
+    input[type="checkbox"]:focus {
+        box-shadow: 0 0 0 1px #0a84ff inset, 0 0 0 1px #0a84ff, 0 0 0 4px #0a84ff4d;
+    }
+    input[type="checkbox"]:checked {
+        background-color: #0060df;
+        border-color: #0060df;
+    }
+    input[type="checkbox"]::before {
+        background-color: currentColor;
+        border-radius: 6px;
+        content: "";
+        display: inline-block;
+        height: 12px;
+        margin-left: 1px;
+        margin-top: 1px;
+        transition: margin-left .2s cubic-bezier(.07, .95, 0, 1);
+        width: 12px;
+    }
+    input[type="checkbox"]:checked::before {
+        background-color: #ffffff;
+        margin-left: 17px;
+    }
+
+    input[type="checkbox"].text {
+        position: relative;
+    }
+    input[type="checkbox"].text::after {
+        content: attr(data-text-off);
+        font-size: 8px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+    }
+    input[type="checkbox"].text:checked::after {
+        color: #ffffff;
+        content: attr(data-text-on);
+        left: 2px;
+        right: auto;
+    }
+    p{
+        color: #ffffff;
+    }
+
+    label{
+        color: #ffffff;
+    }
+
+    #save{
+        background-color: #1B1B1F;
+        color: #ffffff;
+        background: transparent;
+        border: #ffffff 1px solid;
+        outline: none;
+        box-shadow: none;
+        font-size: 25px;
+        border-radius: 30px;
+        text-align: center;
+    }
+}
+
+#setting_view{
+    user-select: none
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script>
+    function data_save(){
+        const check = document.getElementById("line")
+        if(check.checked){
+            Cookies.set("line",String(check.checked))
+        }
+    }
+</script>
+<h1>共有サービス</h1>
+<p>共有画面に表示するサービスを選択できます。<br>オフにしたものは非表示になります。<br>左：オフ<br>右：オン</p>
+
+<label><input type="checkbox" id="line">LINE</label><br>
+<label><input type="checkbox" id="x">X(旧Twitter)</label><br>
+<label><input type="checkbox" id="taittsuu">タイッツー</label><br>
+<label><input type="checkbox" id="whatsapp">WhatsApp</label><br>
+<label><input type="checkbox" id="threads">Threads</label><br>
+<label><input type="checkbox" id="facebook">Facebook</label><br>
+<label><input type="checkbox" id="misskey">Misskey・Mastodon</label><br>
+<label><input type="checkbox" id="bsky">Bluesky</label><br>
+<label><input type="checkbox" id="copy">コピー</label><br>
+<label><input type="checkbox" id="other">その他</label><br>
+
+<button id="save" onclick="data_save()">保存</button>

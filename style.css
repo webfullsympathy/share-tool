@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@100..900&display=swap');
-        
 
 @media (prefers-color-scheme: light) {
     body{
@@ -62,7 +60,8 @@
         border-radius: 50px;
     }
     
-    /*div{
+    /*
+    div{
         background-color: black;
         position: fixed;
         left: 0;
@@ -72,7 +71,7 @@
         display: flex;
         justify-content: center;
     }
-        */
+    */
     
     a{
         outline: none;
