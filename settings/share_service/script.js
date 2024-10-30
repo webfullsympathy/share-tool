@@ -93,7 +93,7 @@ function data_save(){
     Cookies.set("other",String(check.checked),{ expires: 2147483647 })
 
     if(Cookies.get("his") != "true"){
-        Cookies.set("his","true")
+        Cookies.set("his","true",{ expires: 2147483647 })
     }
 
     location.reload()
