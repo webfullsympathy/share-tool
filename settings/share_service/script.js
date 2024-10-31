@@ -1,99 +1,99 @@
-if(Cookies.get("his") != "true"){
-    Cookies.set("line","true",{ expires: 2147483647 })
-    Cookies.set("x","true",{ expires: 2147483647 })
-    Cookies.set("taittsuu","true",{ expires: 2147483647 })
-    Cookies.set("whatsapp","true",{ expires: 2147483647 })
-    Cookies.set("threads","true",{ expires: 2147483647 })
-    Cookies.set("facebook","true",{ expires: 2147483647 })
-    Cookies.set("misskey","true",{ expires: 2147483647 })
-    Cookies.set("bsky","true",{ expires: 2147483647 })
-    Cookies.set("copy","true",{ expires: 2147483647 })
-    Cookies.set("other","true",{ expires: 2147483647 })
+if(localStorage.getItem("his") != "true"){
+    localStorage.setItem("line","true")
+    localStorage.setItem("x","true")
+    localStorage.setItem("taittsuu","true")
+    localStorage.setItem("whatsapp","true")
+    localStorage.setItem("threads","true")
+    localStorage.setItem("facebook","true")
+    localStorage.setItem("misskey","true")
+    localStorage.setItem("bsky","true")
+    localStorage.setItem("copy","true")
+    localStorage.setItem("other","true")
 }
 
 var check = document.getElementById("line")
-if(Cookies.get("line") == "true"){
+if(localStorage.getItem("line") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("x")
-if(Cookies.get("x") == "true"){
+if(localStorage.getItem("x") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("taittsuu")
-if(Cookies.get("taittsuu") == "true"){
+if(localStorage.getItem("taittsuu") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("whatsapp")
-if(Cookies.get("whatsapp") == "true"){
+if(localStorage.getItem("whatsapp") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("threads")
-if(Cookies.get("threads") == "true"){
+if(localStorage.getItem("threads") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("facebook")
-if(Cookies.get("facebook") == "true"){
+if(localStorage.getItem("facebook") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("misskey")
-if(Cookies.get("misskey") == "true"){
+if(localStorage.getItem("misskey") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("bsky")
-if(Cookies.get("bsky") == "true"){
+if(localStorage.getItem("bsky") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("copy")
-if(Cookies.get("copy") == "true"){
+if(localStorage.getItem("copy") == "true"){
     check.checked = true
 }
 
 check = document.getElementById("other")
-if(Cookies.get("other") == "true"){
+if(localStorage.getItem("other") == "true"){
     check.checked = true
 }
 
 function data_save(){
     var check = document.getElementById("line")
-    Cookies.set("line",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("line",String(check.checked))
 
     check = document.getElementById("x")
-    Cookies.set("x",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("x",String(check.checked))
 
     check = document.getElementById("taittsuu")
-    Cookies.set("taittsuu",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("taittsuu",String(check.checked))
 
     check = document.getElementById("whatsapp")
-    Cookies.set("whatsapp",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("whatsapp",String(check.checked))
 
     check = document.getElementById("threads")
-    Cookies.set("threads",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("threads",String(check.checked))
 
     check = document.getElementById("facebook")
-    Cookies.set("facebook",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("facebook",String(check.checked))
 
     check = document.getElementById("misskey")
-    Cookies.set("misskey",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("misskey",String(check.checked))
 
     check = document.getElementById("bsky")
-    Cookies.set("bsky",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("bsky",String(check.checked))
 
     check = document.getElementById("copy")
-    Cookies.set("copy",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("copy",String(check.checked))
 
     check = document.getElementById("other")
-    Cookies.set("other",String(check.checked),{ expires: 2147483647 })
+    localStorage.setItem("other",String(check.checked))
 
-    if(Cookies.get("his") != "true"){
-        Cookies.set("his","true",{ expires: 2147483647 })
+    if(localStorage.getItem("his") != "true"){
+        localStorage.setItem("his","true")
     }
 
     location.reload()
