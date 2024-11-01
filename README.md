@@ -21,7 +21,7 @@
 |Windows|[未完成]()|なし|
 |Mac|[未完成]()|なし|
 |Linux|[未完成]()|なし|
-|VisiOS|[ダウンロード](https://drive.google.com/file/d/1cvxKbwBtlVXBM7vIRLsMlVO4ywFzf7b5/view)|※常に最新版です。|
+|VisiOS|<a href="https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp" download>ダウンロード</a>|※常に最新版です。|
 |PWA|[ダウンロード](https://share-tool.vercel.app)|※共有ボタンの下にある<br>インストールバナーをクリック|
 
 # お知らせ
