@@ -75,6 +75,10 @@ function submit(){
             () => {window.alert("コピーできませんでした。")}
         )
         console.log("コピーを試みました")
+    }else if(service == "Linkedin"){
+        console.log("Linkedinの処理を実行します")
+        window.open("https://www.linkedin.com/shareArticle?source=" + document.main.text.value)
+        console.log("Linkedinの共有ページを新しいタブで開きました")
     }
 }
 

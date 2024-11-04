@@ -1,3 +1,5 @@
+import Store from "https://share-tool.vercel.app/src/electron-store"
+
 if(localStorage.getItem("his") != "true"){
     localStorage.setItem("line","true")
     localStorage.setItem("x","true")
@@ -62,6 +64,46 @@ if(localStorage.getItem("other") == "true"){
 }
 
 function data_save(){
+    // アプリ版
+    if (window.navigator.userAgent.toLowerCase().indexOf("electron") != -1) {
+        const store = new Store()
+
+        var check = document.getElementById("line")
+        store.setItem("line",String(check.checked))
+    
+        check = document.getElementById("x")
+        store.setItem("x",String(check.checked))
+    
+        check = document.getElementById("taittsuu")
+        store.setItem("taittsuu",String(check.checked))
+    
+        check = document.getElementById("whatsapp")
+        store.setItem("whatsapp",String(check.checked))
+    
+        check = document.getElementById("threads")
+        store.setItem("threads",String(check.checked))
+    
+        check = document.getElementById("facebook")
+        store.setItem("facebook",String(check.checked))
+    
+        check = document.getElementById("misskey")
+        store.setItem("misskey",String(check.checked))
+    
+        check = document.getElementById("bsky")
+        store.setItem("bsky",String(check.checked))
+    
+        check = document.getElementById("copy")
+        store.setItem("copy",String(check.checked))
+    
+        check = document.getElementById("other")
+        store.setItem("other",String(check.checked))
+    
+        if(store.getItem("his") != "true"){
+            store.setItem("his","true")
+        }
+    
+        location.reload()
+    }else{
     var check = document.getElementById("line")
     localStorage.setItem("line",String(check.checked))
 
@@ -97,4 +139,73 @@ function data_save(){
     }
 
     location.reload()
+    }
+}
+
+// アプリ版
+if (window.navigator.userAgent.toLowerCase().indexOf("electron") != -1) {
+    const store = new Store()
+
+    if(store.getItem("his") != "true"){
+        store.setItem("line","true")
+        store.setItem("x","true")
+        store.setItem("taittsuu","true")
+        store.setItem("whatsapp","true")
+        store.setItem("threads","true")
+        store.setItem("facebook","true")
+        store.setItem("misskey","true")
+        store.setItem("bsky","true")
+        store.setItem("copy","true")
+        store.setItem("other","true")
+    }
+    
+    var check = document.getElementById("line")
+    if(store.getItem("line") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("x")
+    if(store.getItem("x") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("taittsuu")
+    if(store.getItem("taittsuu") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("whatsapp")
+    if(store.getItem("whatsapp") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("threads")
+    if(store.getItem("threads") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("facebook")
+    if(store.getItem("facebook") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("misskey")
+    if(store.getItem("misskey") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("bsky")
+    if(store.getItem("bsky") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("copy")
+    if(store.getItem("copy") == "true"){
+        check.checked = true
+    }
+    
+    check = document.getElementById("other")
+    if(store.getItem("other") == "true"){
+        check.checked = true
+    }
 }
