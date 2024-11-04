@@ -1,4 +1,4 @@
-import Store from "electron-store"
+import Store from "https://share-tool.vercel.app/src/electron-store/index.js"
 
 window.addEventListener("load", function() {
 
