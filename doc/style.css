@@ -38,3 +38,15 @@ nav div{
   padding: 10px;
   border-radius: 4px;
 }
+
+#back_button{
+    font-size: 28px;
+    vertical-align: 42%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#back_button a{
+    color:black;
+    
+}
