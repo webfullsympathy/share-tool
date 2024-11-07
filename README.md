@@ -1,4 +1,9 @@
 # 共有ツール
+![プログラミング言語](https://skillicons.dev/icons?i=js,html,css,php)
+
+![使用アプリ](https://skillicons.dev/icons?i=discord,notion)
+
+![使用ツール](https://skillicons.dev/icons?i=electron,git,github,vscode)
 
 >[!CAUTION]
 >このツールで起きた事故などに制作者である[ウェブ完理](https://webfullsympathy.github.io)は一切責任を負いません。
