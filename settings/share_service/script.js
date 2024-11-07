@@ -1,5 +1,3 @@
-import Store from "https://share-tool.vercel.app/src/electron-store/index.js"
-
 if(localStorage.getItem("his") != "true"){
     localStorage.setItem("line","true")
     localStorage.setItem("x","true")
