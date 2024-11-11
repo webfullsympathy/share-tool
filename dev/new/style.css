@@ -1,0 +1,39 @@
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: #ffffff;
+    }
+
+    h1,h2,p,label,input[type="file"]{
+        color: #000000;
+        text-align: center;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #1b1b1b;
+    }
+
+    h1,h2,p,label,input[type="file"]{
+        color: #ffffff;
+        text-align: center;
+    }
+}
+
+img{
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+label,input{
+    display: block;
+    margin: 0 auto;
+}
+
+.required{
+    color: #ff0000
+}
