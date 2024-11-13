@@ -1,0 +1,44 @@
+html,
+body {
+    width: 300px;
+    height: 400px;
+    background-color: #5da0ff4f;
+}
+section {
+    background-color: #0034ff14;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea {
+    resize: none!important;
+}
+
+article {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+article div.message-header {
+    border-start-end-radius: 0;
+    border-start-start-radius: 0;
+    font-weight: normal;
+}
+
+article.message {
+    display: none;
+}
+article.message.is-active {
+    display: block;
+}
+div.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

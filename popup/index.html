@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>共有ツール</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Bulma v1.0.2 load from local -->
+    <link rel="stylesheet" href="/assets/bulma.min.css">
+    <!-- Font Awesome v6.6.0 load from local -->
+    <link rel="stylesheet" href="/assets/fa660/css/all.min.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <section class="hero is-small">
+        <div class="hero-body">
+            <p class="title">共有ツール</p>
+            <p class="subtitle">for Browser</p>
+        </div>
+    </section>
+    <div class="app m-5">
+        <textarea id="text" class="textarea mb-3" placeholder="ここにテキストを入力..."></textarea>
+        <div class="field">
+            <div class="control">
+                <div class="select">
+                    <select id="select">
+                        <option value="">選択してください</option>
+                        <option value="line">LINE</option>
+                        <option value="twitter">X(旧Twitter)</option>
+                        <option value="taittsuu">タイッツー</option>
+                        <option value="whatsapp">WhatsApp</option>
+                        <option value="threads">Threads</option>
+                        <option value="fb">Facebook</option>
+                        <option value="bsky">BlueSky</option>
+                        <option value="copy">コピー</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="share" class="button is-link">
+                <span class="icon">
+                    <i class="fa-solid fa-share"></i>
+                </span>
+                <span>共有する！</span>
+            </button>
+        </div>
+        <article id="textMsg" class="message is-danger">
+            <div class="message-header">
+                <div class="flex">
+                    <i class="m-2 fa-solid fa-triangle-exclamation"></i>
+                    <p>共有したいテキストを<br>入力してください。</p>
+                </div>
+                <button class="delete" aria-label="delete"></button>
+            </div>
+        </article>
+        <article id="selectMsg" class="message is-danger">
+            <div class="message-header">
+                <div class="flex">
+                    <i class="m-2 fa-solid fa-triangle-exclamation"></i>
+                    <p>共有したい宛先を<br>選択してください。</p>
+                </div>
+                <button class="delete" aria-label="delete"></button>
+            </div>
+        </article>
+        <article id="copyMsg" class="message is-primary">
+            <div class="message-header">
+                <div class="flex">
+                    <i class="m-2 fa-solid fa-check"></i>
+                    <p>コピーに成功しました！</p>
+                </div>
+                <button class="delete" aria-label="delete"></button>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
