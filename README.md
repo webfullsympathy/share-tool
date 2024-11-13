@@ -1,59 +1,44 @@
-# 共有ツール
-![プログラミング言語](https://skillicons.dev/icons?i=js)![プログラミング言語](https://skillicons.dev/icons?i=html)![プログラミング言語](https://skillicons.dev/icons?i=css)![プログラミング言語](https://skillicons.dev/icons?i=php)
+# 共有ツール for Browser
 
-![使用アプリ](https://skillicons.dev/icons?i=discord)![使用アプリ](https://skillicons.dev/icons?i=notion)
+## 概要
 
-![使用ツール](https://skillicons.dev/icons?i=electron)![使用ツール](https://skillicons.dev/icons?i=git)![使用ツール](https://skillicons.dev/icons?i=github)![使用ツール](https://skillicons.dev/icons?i=vscode)
+![スクリーンショット](./image.png)
 
->[!CAUTION]
->このツールで起きた事故などに制作者である[ウェブ完理](https://webfullsympathy.github.io)は一切責任を負いません。
+共有ツール for Browserは、現状の[Web上で動作している共有ツール](https://share-tool.vercel.app/)をChrome拡張機能にしたものです。
 
-# 説明
-アプリ内にあるHTMLコードを自サイトに貼りつけるだけで様々サービスに対応した共有ボタンを<span style="font-size: 130%;">一つで</span>作ることが出来ます。
+画面構成や使い勝手はほぼ同じですが、内部処理はほぼ新規で作っており、新たにBulmaとFontAwesomeを使用しています。
 
-# 使い方
-[アプリ](https://share-tool.vercel.app)を開くと共有画面が出てきます。
-フッターにある「埋め込みコードはこちら」をクリックして自身のサイトに貼りつけるだけでご利用できます。
+## 使い方
 
-# 共同編集者様
-・[ウェブ完理(管理者)](#ウェブ完理管理者)
+1. まずインストールします
+2. ツールバーに共有ツールをピン留めします
+3. 共有ツールを押します
+4. 上記のようなダイアログが出るので共有したいテキストを入力してください
+5. 共有先を選択(現状Mastodon以外はWeb版と同等の共有先が使用可能です)
+6. 共有する！をクリックし共有！！！
 
-・[うまいだんご](#うまいだんご共同編集者)
+## ダウンロード方法について
 
-# ダウンロード
-|OS/種類|リンク|備考|
-|-|-|-|
-|Windows|[未完成]()|なし|
-|Mac|[未完成]()|なし|
-|Linux|[未完成]()|なし|
-|VisiOS|<a href="https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp" download>ダウンロード</a>|※常に最新版です。|
-|PWA|[ダウンロード](https://share-tool.vercel.app)|※共有ボタンの下にある<br>インストールバナーをクリック|
+Chrome Web Storeからインストールが可能です。
 
-# お知らせ
+**現在公開手続き中です。1週間以内には使えるようになる予定です。**
 
-## X(旧Twitter)でのお知らせ
-[こちら](https://x.com/search?q=%23%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB_%E3%82%A6%E3%82%A7%E3%83%96%E5%AE%8C%E7%90%86)から制作グループのみのお知らせを確認できます。
+（※アカウントの都合上、名義が共有ツールやウェブ完理さん名義ではなく、小川智也名義での公開となっております。使用上は何も問題ございません。）
 
-## お知らせページ
-[こちら](https://flawless-pancake-f2b.notion.site/1166e1c012538078af71d00a6849647b)から制作者本人のお知らせを確認できます。
+## 追加予定の機能について
 
-# 使用ライブラリ
-・[PWA-ASSET-GENERATOR](https://www.npmjs.com/package/pwa-asset-generator)
-・[JS-COOKIE](https://github.com/js-cookie/js-cookie)
+- Mastodon対応
+- 設定画面追加＆項目の表示ONOFF実装
 
-# リンク集
-リンク集は[こちら](https://lit.link/sharetool)
+## ライセンス
 
-# お問い合わせ先
+MIT License
 
-# ウェブ完理(管理者)
-お問い合わせは[このリンク](https://lit.link/webfullsympathy)にウェブ完理のSNSを全て表記しています。
-また、すべてのSNSでDMを解放しているのでお気軽にお問い合わせください。GitHubでのIssuesでもお問い合わせが可能です。
+## 使用フレームワーク
 
-# うまいだんご(共同編集者)
-・[ホームページ](https://umaidango.github.io/me/)
+- Bulma
+- Font Awesome 6 Free
 
-・[X(旧Twitter)](https://x.com/dango12_dango)
+## 制作
 
-## 制作者：[ウェブ完理](https://webfullsympathy.github.io/)
-## 共同編集者：[うまいだんご](https://umaidango.github.io/me/)
+現状Chrome拡張版は [小川智也@ogatomo21](https://github.com/ogatomo21) がほぼ作っています。
