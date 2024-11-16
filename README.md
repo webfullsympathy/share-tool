@@ -21,7 +21,7 @@
 
 Chrome Web Storeからインストールが可能です。
 
-**現在公開手続き中です。1週間以内には使えるようになる予定です。**
+[Chrome Web Storeのページ](https://chromewebstore.google.com/detail/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/folhpgnfkkbpgchbambnjdkaaleaefgh)
 
 （※アカウントの都合上、名義が共有ツールやウェブ完理さん名義ではなく、小川智也名義での公開となっております。使用上は何も問題ございません。）
 
@@ -41,4 +41,6 @@ MIT License
 
 ## 制作
 
-現状Chrome拡張版は [小川智也@ogatomo21](https://github.com/ogatomo21) がほぼ作っています。
+### [小川 智也(企画者)](https://ogatomo.net)
+
+### [ウェブ完理](https://webfullsympathy.github.io)
