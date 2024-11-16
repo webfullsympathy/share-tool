@@ -16,9 +16,10 @@
 フッターにある「埋め込みコードはこちら」をクリックして自身のサイトに貼りつけるだけでご利用できます。
 
 # 共同編集者様
-・[ウェブ完理(管理者)](#ウェブ完理管理者)
 
-・[うまいだんご](#うまいだんご共同編集者)
+- [ウェブ完理(管理者)](#ウェブ完理管理者)
+- [うまいだんご](#うまいだんご共同編集者)
+- [小川 智也](#小川智也共同編集者)
 
 # ダウンロード
 |OS/種類|リンク|備考|
@@ -26,6 +27,7 @@
 |Windows|[未完成]()|なし|
 |Mac|[未完成]()|なし|
 |Linux|[未完成]()|なし|
+|Chrome拡張機能|[ダウンロード](https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh)|自動アップデートあり|
 |VisiOS|<a href="https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp" download>ダウンロード</a>|※常に最新版です。|
 |PWA|[ダウンロード](https://share-tool.vercel.app)|※共有ボタンの下にある<br>インストールバナーをクリック|
 
@@ -55,5 +57,12 @@
 
 ・[X(旧Twitter)](https://x.com/dango12_dango)
 
+# 小川 智也(共同編集者)
+
+- [Tomoyan's Blog](https://ogatomo.net)
+- [X(旧Twitter)](https://x.com/ogatomo21)
+- [GitHub](https://github.com/ogatomo21)
+
 ## 制作者：[ウェブ完理](https://webfullsympathy.github.io/)
-## 共同編集者：[うまいだんご](https://umaidango.github.io/me/)
+## 共同編集者: [うまいだんご](https://umaidango.github.io/me/)
+## 共同編集者: [小川 智也](https://ogatomo.net)
