@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version number for the extension'
+        description: '公開する拡張機能のバージョン'
         required: true
         default: '1.0.0'
 
@@ -39,21 +39,43 @@ jobs:
         run: |
           zip -r chrome_extension.zip . -x "*.git*"
 
-      # Chrome Web Store にアップロード
+      # Chrome Web Store APIを使ってアップロード
       - name: Upload to Chrome Web Store
-        uses: chrome-webstore/upload-cli@v1
-        with:
-          client_id: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
-          client_secret: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
-          refresh_token: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
-          extension_id: ${{ secrets.EXTENSION_ID }}
-          source: ./chrome_extension.zip
+        env:
+          CLIENT_ID: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
+          EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
+        run: |
+          # Google APIの認証を取得
+          echo "Fetching access token..."
+          ACCESS_TOKEN=$(curl -s -X POST "https://oauth2.googleapis.com/token" \
+            -d "client_id=${CLIENT_ID}" \
+            -d "client_secret=${CLIENT_SECRET}" \
+            -d "refresh_token=${REFRESH_TOKEN}" \
+            -d "grant_type=refresh_token" | jq -r '.access_token')
 
-      # 公開をトリガー
+          # 拡張機能をアップロード
+          echo "Uploading extension..."
+          curl -X POST "https://www.googleapis.com/upload/chromewebstore/v1.1/items/${EXTENSION_ID}/?uploadType=media" \
+            -H "Authorization: Bearer $ACCESS_TOKEN" \
+            -F "file=@chrome_extension.zip"
+
+      # Chrome Web Storeで公開
       - name: Publish extension
-        uses: chrome-webstore/publish-cli@v1
-        with:
-          client_id: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
-          client_secret: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
-          refresh_token: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
-          extension_id: ${{ secrets.EXTENSION_ID }}
+        env:
+          CLIENT_ID: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
+          REFRESH_TOKEN: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
+          EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
+        run: |
+          # Google APIの認証を取得
+          ACCESS_TOKEN=$(curl -s -X POST "https://oauth2.googleapis.com/token" \
+            -d "client_id=${CLIENT_ID}" \
+            -d "client_secret=${CLIENT_SECRET}" \
+            -d "refresh_token=${REFRESH_TOKEN}" \
+            -d "grant_type=refresh_token" | jq -r '.access_token')
+
+          # Chrome Web Storeで公開
+          curl -X POST "https://www.googleapis.com/chromewebstore/v1.1/items/${EXTENSION_ID}/publish" \
+            -H "Authorization: Bearer $ACCESS_TOKEN"
