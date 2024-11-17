@@ -41,7 +41,6 @@
 
 # 使用ライブラリ
 ・[PWA-ASSET-GENERATOR](https://www.npmjs.com/package/pwa-asset-generator)
-・[JS-COOKIE](https://github.com/js-cookie/js-cookie)
 
 # リンク集
 リンク集は[こちら](https://lit.link/sharetool)
