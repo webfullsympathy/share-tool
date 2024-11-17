@@ -6,7 +6,7 @@ on:
       version:
         description: 'Version number for the extension'
         required: true
-        default: '1.0'
+        default: '1.0.0'
 
 jobs:
   release:
@@ -29,15 +29,15 @@ jobs:
       # manifest.jsonの更新をコミット
       - name: Commit changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "${{ github.actor }}"  # 実行者のユーザー名を設定
+          git config user.email "${{ github.actor }}@users.noreply.github.com"  # 実行者のメールアドレスを設定
           git add manifest.json
           git commit -m "Update manifest.json version to $VERSION"
 
-      # manifest.jsonの更新をプッシュ
+      # manifest.jsonの更新をプッシュ（実行ユーザーとして）
       - name: Push changes to repository
         run: |
-          git push origin HEAD:${{ github.ref }}
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
 
       # 拡張機能をzip化
       - name: Create zip package
