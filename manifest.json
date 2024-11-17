@@ -16,8 +16,12 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://share-tool.vercel.app/*"],
-            "js": ["/script.js"]
+            "matches": ["https://share-tool.vercel.app/*","http://share-tool.vercel.app/*"],
+            "js": ["/js/script.js"]
+        },
+        {
+            "matches": ["https://www.itmedia.co.jp/news/articles/*","http://www.itmedia.co.jp/news/articles/*"],
+            "js": ["js/itmedia.js"]
         }
     ]
 }
