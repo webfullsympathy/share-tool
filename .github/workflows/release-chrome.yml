@@ -2,58 +2,10 @@ name: Chrome Extension Release
 
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version number for the extension'
-        required: true
-        default: '1.0.0'
 
 jobs:
-  release:
+  dummy:
+    if: ${{ false }}
     runs-on: ubuntu-latest
-
     steps:
-      # リポジトリをチェックアウト
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      # manifest.jsonのversionを手動で指定したversionに更新
-      - name: Update version in manifest.json
-        id: update_manifest
-        run: |
-          VERSION="${{ github.event.inputs.version }}"  # 入力されたバージョン番号
-          echo "Updating version to $VERSION"
-          jq --arg version "$VERSION" '.version = $version' manifest.json > manifest_updated.json
-          mv manifest_updated.json manifest.json
-
-      # manifest.jsonの更新をコミット
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add manifest.json
-          git commit -m "Update manifest.json version to $VERSION"
-
-      # 拡張機能をzip化
-      - name: Create zip package
-        run: |
-          zip -r chrome_extension.zip . -x "*.git*"
-
-      # Chrome Web Store にアップロード
-      - name: Upload to Chrome Web Store
-        uses: chrome-webstore/upload-cli@v1
-        with:
-          client_id: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
-          client_secret: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
-          refresh_token: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
-          extension_id: ${{ secrets.EXTENSION_ID }}
-          source: ./chrome_extension.zip
-
-      # 公開をトリガー
-      - name: Publish extension
-        uses: chrome-webstore/publish-cli@v1
-        with:
-          client_id: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
-          client_secret: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
-          refresh_token: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
-          extension_id: ${{ secrets.EXTENSION_ID }}
+      - run: ""
