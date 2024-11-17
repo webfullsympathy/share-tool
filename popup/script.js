@@ -1,12 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const share = document.getElementById("share")
+let LINEurl = "";
 
-    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-        chrome.tabs.sendMessage(tabs[0].id, {action: "getPageInfo"},
-            (response) => {
-                document.getElementById("text").value = response.title + " - " + response.url
-            })
-    })
+document.addEventListener("DOMContentLoaded", () => {
+    const share = document.getElementById("share");
+    const urlText = window.location.href;
+    const urlObj = new URL(urlText);
+
+    const htmlTextarea = document.getElementById("text");
+
+    const paramTitle = urlObj.searchParams.get("title");
+    const paramURL = urlObj.searchParams.get("url");
+
+    if(paramTitle && paramURL){
+        htmlTextarea.value = `${paramTitle}\n\n${paramURL}`;
+        htmlTextarea.readOnly = true;
+        LINEurl =  paramURL;
+    }else{
+
+    }
 
     share.addEventListener("click", () => {
         const text = document.getElementById("text").value
