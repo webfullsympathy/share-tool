@@ -5,12 +5,10 @@ window.addEventListener("load", function() {
     document.getElementById("msbBtnHatenabookmark_minimalTop").remove()
     document.getElementById("msbBtnPocket_minimalTop").remove()
 
-    //fetch("chrome-extension://folhpgnfkkbpgchbambnjdkaaleaefgh/js/itmedia1.txt")
-    fetch("http://localhost:5500/share-tool/js/itmedia1.txt")
+    fetch("chrome-extension://folhpgnfkkbpgchbambnjdkaaleaefgh/js/itmedia1.txt")
     .then(response1 => response1.text())
     .then(share1data => {
-        //fetch("chrome-extension://folhpgnfkkbpgchbambnjdkaaleaefgh/js/itmedia2.txt")
-        fetch("http://localhost:5500/js/itmedia2.txt")
+        fetch("chrome-extension://folhpgnfkkbpgchbambnjdkaaleaefgh/js/itmedia2.txt")
         .then(response2 => response2.text())
         .then(share2data => {
             let new_share_button = document.createElement("td")
