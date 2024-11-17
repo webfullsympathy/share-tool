@@ -1,12 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const share = document.getElementById("share");
+    const share = document.getElementById("share")
+
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, {action: "getPageInfo"},
+            (response) => {
+                document.getElementById("text").value = response.title + " - " + response.url
+            })
+    })
 
     share.addEventListener("click", () => {
-        const text = document.getElementById("text").value;
-        const select = document.getElementById("select").value;
+        const text = document.getElementById("text").value
+        const select = document.getElementById("select").value
 
-        if (text === "") {openModal("textMsg");return;}
-        if (select === "") {openModal("selectMsg");return;}
+        if (text === "") {
+            openModal("textMsg")
+            return
+        }
+        if (select === "") {
+            openModal("selectMsg")
+            return
+        }
 
         const list = {
             "line": `https://social-plugins.line.me/lineit/share?text=`,
@@ -19,8 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (list[select]) {
-            const url = `${list[select]}${encodeURIComponent(text)}`;
-            window.open(url, "_blank");
+            const url = `${list[select]}${encodeURIComponent(text)}`
+            window.open(url, "_blank")
         }else if(select == "mstdn"){
 
         }else if(select == "copy"){
@@ -31,21 +44,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 () => {openModal("copyMsg")},
                 () => {window.alert("コピーできませんでした。")}
             )
-        }else{other(text);}
-        console.log(`共有先: ${select}, テキスト: ${text}`);
-    });
+        }else{other(text)}
+        console.log(`共有先: ${select}, テキスト: ${text}`)
+    })
 
     async function other (text){
         try {
-            await navigator.share({text: text});
+            await navigator.share({text: text})
         } catch (error) {
-            console.error(error);
+            console.error(error)
         }
     }
 
     // モーダル関連関数
-    const openModal = (id) => {closeAllModals();document.getElementById(id).classList.add("is-active");};
-    const closeModal = (el) => el.classList.remove("is-active");
-    const closeAllModals = () => document.querySelectorAll(".message.is-active").forEach(closeModal);
-    document.querySelectorAll(".delete").forEach(($c) => $c.addEventListener("click", () => closeModal($c.closest(".message"))));
-});
+    const openModal = (id) => {
+        closeAllModals()
+        document.getElementById(id).classList.add("is-active")
+    }
+    const closeModal = (el) => {
+        el.classList.remove("is-active")
+    }
+    const closeAllModals = () => {
+        document.querySelectorAll(".message.is-active").forEach(closeModal)
+    }
+    document.querySelectorAll(".delete").forEach(($c) => {
+        $c.addEventListener("click", () => {
+            closeModal($c.closest(".message"))
+        })
+    })
+})
