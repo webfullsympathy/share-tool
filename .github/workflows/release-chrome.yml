@@ -2,11 +2,6 @@ name: Chrome Extension Release
 
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version number for the extension'
-        required: true
-        default: '1.0.0'
 
 jobs:
   release:
@@ -16,36 +11,15 @@ jobs:
       # リポジトリをチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v3
-
-      # manifest.jsonのversionを手動で指定したversionに更新
-      - name: Update version in manifest.json
-        id: update_manifest
-        run: |
-          VERSION="${{ github.event.inputs.version }}"  # 入力されたバージョン番号
-          echo "Updating version to $VERSION"
-          jq --arg version "$VERSION" '.version = $version' manifest.json > manifest_updated.json
-          mv manifest_updated.json manifest.json
-
-      # manifest.jsonの更新をコミット
-      - name: Commit changes
-        run: |
-          git config user.name "${{ github.actor }}"  # 実行者のユーザー名を設定
-          git config user.email "${{ github.actor }}@users.noreply.github.com"  # 実行者のメールアドレスを設定
-          git add manifest.json
-          git commit -m "Update manifest.json version to $VERSION"
-
-      # manifest.jsonの更新をプッシュ（実行ユーザーとして）
-      - name: Push changes to repository
-        run: |
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:${{ github.ref }}
-
+        
       # 拡張機能をzip化
-      - name: Create zip package
+      - name: Step1. 拡張機能をzip化する
         run: |
+          echo "リポジトリを圧縮中..."
           zip -r chrome_extension.zip . -x "*.git*"
 
       # Chrome Web Store APIを使ってアップロード
-      - name: Upload to Chrome Web Store
+      - name: Step2. Chrome Web Store にZIPファイルをアップロード
         env:
           CLIENT_ID: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
@@ -53,7 +27,7 @@ jobs:
           EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
         run: |
           # Google APIの認証を取得
-          echo "Fetching access token..."
+          echo "アクセストークンを取得中..."
           ACCESS_TOKEN=$(curl -s -X POST "https://oauth2.googleapis.com/token" \
             -d "client_id=${CLIENT_ID}" \
             -d "client_secret=${CLIENT_SECRET}" \
@@ -61,13 +35,13 @@ jobs:
             -d "grant_type=refresh_token" | jq -r '.access_token')
 
           # 拡張機能をアップロード
-          echo "Uploading extension..."
+          echo "サーバーに拡張機能をアップロード中..."
           curl -X POST "https://www.googleapis.com/upload/chromewebstore/v1.1/items/${EXTENSION_ID}/?uploadType=media" \
             -H "Authorization: Bearer $ACCESS_TOKEN" \
             -F "file=@chrome_extension.zip"
 
       # Chrome Web Storeで公開
-      - name: Publish extension
+      - name: Step3. Chrome Web Store に公開！
         env:
           CLIENT_ID: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
@@ -75,6 +49,7 @@ jobs:
           EXTENSION_ID: ${{ secrets.EXTENSION_ID }}
         run: |
           # Google APIの認証を取得
+          echo "アクセストークンを取得中..."
           ACCESS_TOKEN=$(curl -s -X POST "https://oauth2.googleapis.com/token" \
             -d "client_id=${CLIENT_ID}" \
             -d "client_secret=${CLIENT_SECRET}" \
@@ -82,5 +57,6 @@ jobs:
             -d "grant_type=refresh_token" | jq -r '.access_token')
 
           # Chrome Web Storeで公開
+          echo "公開の最終処理を実行しています..."
           curl -X POST "https://www.googleapis.com/chromewebstore/v1.1/items/${EXTENSION_ID}/publish" \
             -H "Authorization: Bearer $ACCESS_TOKEN"
