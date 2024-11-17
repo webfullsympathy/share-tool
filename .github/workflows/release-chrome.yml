@@ -1,13 +1,15 @@
 name: Chrome Extension Release
 
 on:
-  release:
-    types:
-      - published  # リリースが公開されたときにトリガー
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number for the extension'
+        required: true
+        default: '1.0.0'
 
 jobs:
   release:
-    if: github.ref_name == 'chrome'  # chromeブランチ限定
     runs-on: ubuntu-latest
 
     steps:
@@ -15,12 +17,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # manifest.jsonのversionを更新
+      # manifest.jsonのversionを手動で指定したversionに更新
       - name: Update version in manifest.json
         id: update_manifest
         run: |
-          RELEASE_NAME="${{ github.event.release.tag_name }}"
-          VERSION=$(echo "$RELEASE_NAME" | sed -E 's/^cr//')
+          VERSION="${{ github.event.inputs.version }}"  # 入力されたバージョン番号
+          echo "Updating version to $VERSION"
           jq --arg version "$VERSION" '.version = $version' manifest.json > manifest_updated.json
           mv manifest_updated.json manifest.json
 
