@@ -13,7 +13,7 @@ jobs:
     steps:
       # リポジトリをチェックアウト
       - name: Step0. Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       # 拡張機能をzip化
       - name: Step1. 拡張機能をzip化する
