@@ -1,6 +1,9 @@
 name: Chrome Extension Release
 
 on:
+  push:
+    tags:
+      - "cr*.*"
   workflow_dispatch:
 
 jobs:
