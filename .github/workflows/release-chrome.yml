@@ -22,11 +22,10 @@ jobs:
           zip -r sharetool-chrome.zip . -x "*.git*"
 
       - name: Step2. Chrome Web Store にアップロード＆公開！
-        uses: mobilefirstllc/cws-publish@latest
+        uses: mnao305/chrome-extension-upload@v5.0.0
         with:
-          action: 'publish'  # one of: upload, publish, testers
-          client_id: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
-          client_secret: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
-          refresh_token: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
-          extension_id: 'folhpgnfkkbpgchbambnjdkaaleaefgh' 
-          zip_file: 'sharetool-chrome.zip'
+          file-path: sharetool-chrome.zip
+          extension-id: folhpgnfkkbpgchbambnjdkaaleaefgh
+          client-id: ${{ secrets.CHROME_WEBSTORE_CLIENT_ID }}
+          client-secret: ${{ secrets.CHROME_WEBSTORE_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CHROME_WEBSTORE_REFRESH_TOKEN }}
