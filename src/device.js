@@ -44,27 +44,27 @@ function resizeWindow(){
         }else if (location.href.includes("?")){
             if (!location.href.includes("embed")){
                 if(location.href.includes("visi")){
-                    location.href = "https://share-tool.vercel.app/index.html" + "?text=" + move_data + "&visi=os"
+                    location.href = "https://share-tool.net/index.html" + "?text=" + move_data + "&visi=os"
                 }else{
-                    location.href = "https://share-tool.vercel.app/index.html" + "?text=" + move_data
+                    location.href = "https://share-tool.net/index.html" + "?text=" + move_data
                 }
             }else {
                 if(location.href.includes("visi")){
-                    location.href = "https://share-tool.vercel.app/embed/index.html" + "?visi=os"
+                    location.href = "https://share-tool.net/embed/index.html" + "?visi=os"
                 }else{
-                    location.href = "https://share-tool.vercel.app/embed/index.html"
+                    location.href = "https://share-tool.net/embed/index.html"
                 }
             }
         }else{
             if (!location.href.includes("embed")){
                 if(location.href.includes("visi")){
-                    location.href = "https://share-tool.vercel.app/index.html" + "?visi=os"
+                    location.href = "https://share-tool.net/index.html" + "?visi=os"
                 }else{
-                    location.href = "https://share-tool.vercel.app/index.html"
+                    location.href = "https://share-tool.net/index.html"
                 }
             }else{
                 if(location.href.includes("visi")){
-                    location.href = "https://share-tool.vercel.app/embed/index.html"
+                    location.href = "https://share-tool.net/embed/index.html"
                 }
             }
         }

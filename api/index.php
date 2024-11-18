@@ -2,8 +2,8 @@
 <?php
     if(isset($_GET["t"])) {
         $text = $_GET["t"];
-        echo "https://share-tool.vercel.app?text=".$text;
+        echo "https://share-tool.net?text=".$text;
     }else{
-        echo "https://share-tool.vercel.app";
+        echo "https://share-tool.net";
     }
 ?>

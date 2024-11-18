@@ -12,7 +12,7 @@
 アプリ内にあるHTMLコードを自サイトに貼りつけるだけで様々サービスに対応した共有ボタンを<span style="font-size: 130%;">一つで</span>作ることが出来ます。
 
 # 使い方
-[アプリ](https://share-tool.vercel.app)を開くと共有画面が出てきます。
+[アプリ](https://share-tool.net)を開くと共有画面が出てきます。
 フッターにある「埋め込みコードはこちら」をクリックして自身のサイトに貼りつけるだけでご利用できます。
 
 # 共同編集者様
@@ -29,7 +29,7 @@
 |Linux|[未完成]()|なし|
 |Chrome拡張機能|[ダウンロード](https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh)|自動アップデートあり|
 |VisiOS|<a href="https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp" download>ダウンロード</a>|※常に最新版です。|
-|PWA|[ダウンロード](https://share-tool.vercel.app)|※共有ボタンの下にある<br>インストールバナーをクリック|
+|PWA|[ダウンロード](https://share-tool.net)|※共有ボタンの下にある<br>インストールバナーをクリック|
 
 # お知らせ
 
