@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
     if(isset($_GET["t"])) {
         $text = $_GET["t"];
