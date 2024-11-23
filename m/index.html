@@ -52,11 +52,111 @@
 <link rel="apple-touch-startup-image" href="https://share-tool.net/icons/apple-splash-1136-640.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
 </head>
 <body>
-    <!--スプラッシュ-->
-    <div style="background: #ffffff2e;padding-left: 15px;margin-left: -10px;margin-right: -8px;margin-top: -10px;position: unset;/*! left: 0; *//*! bottom: 0; */width: 100%;color: black;display: block;margin-bottom: 50px;">
-        <img src="https://share-tool.net/src/share.jpg" style="display: inline-block;margin: 5px;vertical-align: -70%;">
+    <!--ここからヘッダー-->
+    <div id="header">
+        <img onclick="menu_open()" src="https://share-tool.net/menu.svg" id="menu" class="menu_open">
+        <img src="https://share-tool.net/src/share.jpg" style="display: inline-block;margin: 5px;vertical-align: -70%; width: 48px;">
         <span id="text" style="font-size: 18px;">Share Tool</span>
     </div>
+    <!--ここまでヘッダー-->
+    <!--ここからメニュー-->
+    <div style="background: none;display: block;height: 3vh;position: unset;"></div>
+    <div id="menu_window" style="display: none;">
+        <h3 style="margin-left: -25px;">
+            <span src="https://share-tool.net/menu.svg" id="menu" onclick="menu_close()" style="font-size: 32px;vertical-align: 25%;">✕</span>
+            Share Tool Menu
+        </h3>
+        <div>
+            <ul>
+                <a class="menu_a" href="https://github.com/webfullsympathy/share-tool"><li>GitHubで見る</li></a>
+                <a class="menu_a" href="https://share-tool.net/embed"><li>埋め込みコードはこちら</li></a>
+                <a class="menu_a" href="https://share-tool.net/doc"><li>ドキュメント</li></a>
+                <a class="menu_a" href="https://lit.link/sharetool"><li>リンク集</li></a>
+                <a class="menu_a" href="https://share-tool.net/dev"><li>開発者</li></a>
+                <a class="menu_a" href="https://share-tool.net/settings"><li>設定</li></a>
+            </ul>
+        </div>
+    </div>
+    <div id="back_menu"></div>
+    <style>
+        #menu{
+            display: inline-block;
+            width: 48px;
+            vertical-align: -46%;
+            cursor: pointer;
+        }
+
+        #menu_window{
+            display: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 2px #fff;
+            padding: 30px;
+            position: fixed;
+            top: 30px;
+            width: 60%;
+            background:#fff;
+            z-index: 5;
+            }
+
+        #back_menu{
+            z-index: 4;
+            background: #000;
+            opacity: 0.8;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        #header{
+            background: #ffffff2e;
+            padding-left: 15px;
+            margin-left: -10px;
+            margin-right: -8px;
+            margin-top: -10px;
+            position: unset;
+            /*! left: 0; */
+            /*! bottom: 0; */
+            width: 100%;
+            color: black;
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        div ul{
+            color:#fff;
+            list-style: none;
+        }
+
+        @media (prefers-color-scheme: light) {
+        .menu_open{
+            mix-blend-mode: difference;
+        }
+
+        .menu_a{
+            mix-blend-mode: difference;
+        }
+        }
+    </style>
+    <script>
+        function menu_open(){
+            const menubar = document.getElementById("menu_window");
+            const back = document.getElementById("back_menu");
+            menubar.style.display = "block";
+            back.style.display = "block";
+        }
+
+        function menu_close(){
+            const menubar = document.getElementById("menu_window");
+            const back = document.getElementById("back_menu");
+            menubar.style.display = "none";
+            back.style.display = "none";
+        }
+    </script>
+    <!--ここまでメニュー-->
+
     <h1 id="text">共有</h1>
     <form name="main">
     <textarea id="share" placeholder="共有する文字列を入力・・・" name="text"></textarea>
@@ -78,11 +178,7 @@
     <button type="submit" id="btn" onclick="window.submit();">共有</button>
     <br><br><br><br>
     </form>
-    <div>
-        <nobr>
-            <a href="https://share-tool.net/doc"><h3>ドキュメント</h3></a>
-        </nobr>
-    </div>
+
     <script src="https://share-tool.net/src/cookie_data.js"></script>
 </body>
 </html>

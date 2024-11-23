@@ -1,18 +1,6 @@
 @media (prefers-color-scheme: light) {
     body{
         background-color: #ffffff;
-        text-align: center;
-    }
-
-    div{
-        background-color: black;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: white;
-        display: flex;
-        justify-content: center;
     }
     
     a{
@@ -37,23 +25,13 @@
         border-radius: 3px;
         font-family: courier, monospace;
         border: 1px black solid;
+        color: #ffffff;
     }
 }
 @media (prefers-color-scheme: dark) {
     body{
         background-color: #1B1B1F;
         text-align: center;
-    }
-
-    div{
-        background-color: #ffffff;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: black;
-        display: flex;
-        justify-content: center;
     }
     
     a{
@@ -78,6 +56,7 @@
         border-radius: 3px;
         font-family: courier, monospace;
         border: 1px #fff solid;
+        color: #000000;
     }
 }
 

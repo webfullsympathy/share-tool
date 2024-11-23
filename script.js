@@ -81,17 +81,3 @@ function submit(){
         console.log("Linkedinの共有ページを新しいタブで開きました")
     }
 }
-
-function menu_open(){
-    const menubar = document.getElementById("menu_window");
-    const back = document.getElementById("back_menu");
-    menubar.style.display = "block";
-    back.style.display = "block";
-}
-
-function menu_close(){
-    const menubar = document.getElementById("menu_window");
-    const back = document.getElementById("back_menu");
-    menubar.style.display = "none";
-    back.style.display = "none";
-}
