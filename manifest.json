@@ -1,10 +1,10 @@
 {
-    "manifest_version": 3,
+    "manifest_version": 2,
     "name": "共有ツール - Share Tool",
     "short_name": "共有ツール",
     "description": "共有ツールはワンクリックでテキストやURLをLINEやX(旧Twitter)などのSNSへ簡単に共有することができます。",
     "version": "1.2.1",
-    "permissions": ["activeTab", "scripting", "contextMenus"],
+    "permissions": ["activeTab", "contextMenus"],
     "homepage_url": "https://share-tool.vercel.app",
     "icons": {
         "16": "/assets/icons/icon-16.png",
@@ -12,24 +12,10 @@
         "48": "/assets/icons/icon-48.png",
         "128": "/assets/icons/icon-128.png"
     },
-    "action": {
-        "default_popup": "popup/index.html",
-        "default_icon": {
-            "16": "/assets/icons/icon-16.png",
-            "48": "/assets/icons/icon-48.png",
-            "128": "/assets/icons/icon-128.png"
-        }
-    },
     "background": {
-        "scripts": ["background.js"],
-        "persistent": false
+        "scripts": ["background.js"]
     },
-    "web_accessible_resources": [
-        {
-            "resources": ["popup/*"],
-            "matches": ["<all_urls>"]
-        }
-    ],
+    "web_accessible_resources": ["popup/*"],
     "browser_specific_settings": {
         "gecko": {
             "id": "webfullsympathy@mail.share-tool.net"
