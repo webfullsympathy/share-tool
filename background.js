@@ -1,5 +1,5 @@
 const sharePage = () => {
-    const popupBaseURL = chrome.runtime.getURL("popup/index.html");
+    const popupBaseURL = browser.runtime.getURL("popup/index.html");
 
     // 現在のページのタイトルとURLを取得
     const pageTitle = document.title; // ページのタイトル
@@ -17,8 +17,8 @@ const sharePage = () => {
 };
 
 // 拡張機能がインストールされた時の処理
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.contextMenus.create({
+browser.runtime.onInstalled.addListener(() => {
+    browser.contextMenus.create({
         id: "share_page",
         title: "現在のページを共有...",
         contexts: ["page"], // ページコンテキストメニューで表示
@@ -26,9 +26,9 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 // コンテキストメニューがクリックされた時の処理
-chrome.contextMenus.onClicked.addListener((info, tab) => {
+browser.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "share_page") {
-        chrome.scripting.executeScript({
+        browser.scripting.executeScript({
             target: { tabId: tab.id },
             func: sharePage,
         });
