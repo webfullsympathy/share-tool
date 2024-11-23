@@ -4,7 +4,7 @@
     "short_name": "共有ツール",
     "description": "共有ツールはワンクリックでテキストやURLをLINEやX(旧Twitter)などのSNSへ簡単に共有することができます。",
     "version": "1.2",
-    "permissions": ["activeTab", "contextMenus"],
+    "permissions": ["activeTab", "scripting", "contextMenus"],
     "homepage_url": "https://share-tool.vercel.app",
     "icons": {
         "16": "/assets/icons/icon-16.png",
