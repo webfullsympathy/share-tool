@@ -1,21 +1,20 @@
-let LINEurl = "";
-
 document.addEventListener("DOMContentLoaded", () => {
-    const share = document.getElementById("share");
-    const urlText = window.location.href;
-    const urlObj = new URL(urlText);
+    const share = document.getElementById("share")
 
-    const htmlTextarea = document.getElementById("text");
+    let locationurl = new URL(location.href)
+    let title = locationurl.searchParams.get("title")
+    let url = locationurl.searchParams.get("url")
+    
+    if(title === null || url === null){
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            const activeTab = tabs[0]
+            title = activeTab.title
+            url = activeTab.url
 
-    const paramTitle = urlObj.searchParams.get("title");
-    const paramURL = urlObj.searchParams.get("url");
-
-    if(paramTitle && paramURL){
-        htmlTextarea.value = `${paramTitle}\n\n${paramURL}`;
-        htmlTextarea.readOnly = true;
-        LINEurl =  paramURL;
+            document.getElementById("text").value = title + "-" + url
+        })
     }else{
-
+        document.getElementById("text").value = title + "-" + url
     }
 
     share.addEventListener("click", () => {
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }else if(select == "mstdn"){
 
         }else if(select == "copy"){
-            if (!navigator.clipboard) {
+            if (!!navigator.clipboard) {
                 window.alert("お使いのブラウザにコピー機能が実装されていません。\n最新にアップデートするか標準ブラウザなどの比較的新しいブラウザをご利用ください。")
             }
             navigator.clipboard.writeText(text).then(

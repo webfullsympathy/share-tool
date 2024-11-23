@@ -1,29 +1,23 @@
-const sharePage = () => {
-    const popupBaseURL = chrome.runtime.getURL("popup/index.html");
+function sharePage(){
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        const activeTab = tabs[0]
+        const title = activeTab.title
+        const url = activeTab.url
 
-    // 現在のページのタイトルとURLを取得
-    const pageTitle = document.title; // ページのタイトル
-    const pageURL = window.location.href; // 現在のURL
-
-    // タイトルとURLをエンコード
-    const encodedTitle = encodeURIComponent(pageTitle);
-    const encodedURL = encodeURIComponent(pageURL);
-
-    // クエリパラメータを構築
-    const popupURL = `${popupBaseURL}?title=${encodedTitle}&url=${encodedURL}`;
-
-    // ポップアップを開く
-    window.open(popupURL, "", "popup, width=301, height=401, scrollbars=0, sizable=0,toolbar=0");
-};
+        const openURL = chrome.runtime.getURL("popup/index.html") + "?title=" + encodeURIComponent(title) + "&url=" + encodeURIComponent(url)
+        window.open(openURL, "", "popup, width=301, height=401, scrollbars=0, sizable=0,toolbar=0")
+        window.close()
+    })
+}
 
 // 拡張機能がインストールされた時の処理
 chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "share_page",
-        title: "現在のページを共有...",
-        contexts: ["page"], // ページコンテキストメニューで表示
-    });
-});
+        title: "現在のページを共有",
+        contexts: ["page"],
+    })
+})
 
 // コンテキストメニューがクリックされた時の処理
 chrome.contextMenus.onClicked.addListener((info, tab) => {
@@ -31,6 +25,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         chrome.scripting.executeScript({
             target: { tabId: tab.id },
             func: sharePage,
-        });
+        })
     }
-});
+})
