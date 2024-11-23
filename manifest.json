@@ -13,10 +13,16 @@
         "128": "/assets/icons/icon-128.png"
     },
     "action": {
-        "default_popup": "popup/index.html"
+        "default_popup": "popup/index.html",
+        "default_icon": {
+            "16": "/assets/icons/icon-16.png",
+            "48": "/assets/icons/icon-48.png",
+            "128": "/assets/icons/icon-128.png"
+        }
     },
     "background": {
-        "service_worker": "background.js"
+        "scripts": ["background.js"],
+        "persistent": false
     },
     "web_accessible_resources": [
         {
@@ -25,6 +31,8 @@
         }
     ],
     "browser_specific_settings": {
-        "gecko": { "id": "webfullsympathy@mail.share-tool.net" }
+        "gecko": {
+            "id": "webfullsympathy@mail.share-tool.net"
+        }
     }
 }
