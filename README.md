@@ -1,10 +1,12 @@
-# 共有ツール for Browser
+# 共有ツール for Browser (Firefox版)
 
 ## 概要
 
 ![スクリーンショット](./image.png)
 
-共有ツール for Browserは、現状の[Web上で動作している共有ツール](https://share-tool.vercel.app/)をChrome拡張機能にしたものです。
+共有ツール for Browserは、現状の[Web上で動作している共有ツール](https://share-tool.vercel.app/)をFirefox拡張機能にしたものです。
+
+ほぼChrome版と同じコードで動いてます。
 
 画面構成や使い勝手はほぼ同じですが、内部処理はほぼ新規で作っており、新たにBulmaとFontAwesomeを使用しています。
 
@@ -19,9 +21,9 @@
 
 ## ダウンロード方法について
 
-Chrome Web Storeからインストールが可能です。
+Firefox Add-ons Storeからインストールが可能です。
 
-[Chrome Web Storeのページ](https://chromewebstore.google.com/detail/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/folhpgnfkkbpgchbambnjdkaaleaefgh)
+準備中...
 
 （※アカウントの都合上、名義が共有ツールやウェブ完理さん名義ではなく、小川智也名義での公開となっております。使用上は何も問題ございません。）
 
