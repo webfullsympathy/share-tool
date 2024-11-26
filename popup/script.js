@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (list[select]) {
             const url = `${list[select]}${encodeURIComponent(text)}`
-            window.open(url, "_blank")
+            window.open(url, "", "popup, width=500, height=500")
         }else if(select == "mstdn"){
 
         }else if(select == "copy"){
@@ -54,8 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 () => {openModal("copyMsg")},
                 () => {window.alert("コピーできませんでした。")}
             )
+            return;
         }else{other(text)}
         console.log(`共有先: ${select}, テキスト: ${text}`)
+        window.close()
     })
 
     async function other (text){

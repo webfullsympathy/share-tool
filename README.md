@@ -23,7 +23,7 @@
 
 Firefox Add-ons Storeからインストールが可能です。
 
-準備中...
+[![Firefox Add-ons Store](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/)
 
 （※アカウントの都合上、名義が共有ツールやウェブ完理さん名義ではなく、小川智也名義での公開となっております。使用上は何も問題ございません。）
 

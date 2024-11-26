@@ -1,3 +1,4 @@
+// 現在のページを共有する関数
 const sharePage = () => {
     const popupBaseURL = browser.runtime.getURL("popup/index.html");
 
@@ -28,9 +29,9 @@ browser.runtime.onInstalled.addListener(() => {
 // コンテキストメニューがクリックされた時の処理
 browser.contextMenus.onClicked.addListener((info, tab) => {
     if (info.menuItemId === "share_page") {
-        browser.scripting.executeScript({
-            target: { tabId: tab.id },
-            func: sharePage,
+        // 現在のタブでスクリプトを実行
+        browser.tabs.executeScript(tab.id, {
+            code: `(${sharePage.toString()})();`
         });
     }
 });
