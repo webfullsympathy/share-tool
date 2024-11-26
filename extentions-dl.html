@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAリダイレクト</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ua = navigator.userAgent;
+            
+            if (/Chrome/.test(ua) && !/Edge|OPR|Edg/.test(ua) && !/Mobile/.test(ua)) {
+                // Chromeのデスクトップ版
+                window.location.href = "https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh";
+            } else if (/Firefox/.test(ua) && !/Mobile/.test(ua)) {
+                // Firefoxのデスクトップ版
+                window.location.href = "https://addons.mozilla.org/ja/android/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/";
+            } else {
+                // その他
+                window.location.href = "/";
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
