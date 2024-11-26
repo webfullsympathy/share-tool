@@ -1,8 +1,8 @@
 <?php
     if(isset($_GET["t"])) {
         $text = $_GET["t"];
-        echo "https://share-tool.net?text=".$text;
+        echo "https://m.share-tool.net?text=".$text;
     }else{
-        echo "https://share-tool.net";
+        echo "https://m.share-tool.net";
     }
 ?>
