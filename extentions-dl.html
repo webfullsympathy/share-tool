@@ -16,7 +16,12 @@
                 window.location.href = "https://addons.mozilla.org/ja/android/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/";
             } else {
                 // その他
-                window.location.href = "/";
+                document.body.innerHTML = `
+                <h1>あなたのブラウザを検知できませんでした</h1>
+                <p>あなたのブラウザを教えていただけますか？</p>
+                <button onclick="location.href='https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh'">Chromiumベース(Chrome・新Edge・Vivaldi・Braveなど)</button>
+                <button onclick="location.href='https://addons.mozilla.org/ja/android/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/'">Firefoxベース(Firefox・Floopなど)</button>
+                `
             }
         });
     </script>
