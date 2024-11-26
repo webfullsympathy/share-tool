@@ -172,6 +172,34 @@
         color: white;
     }
 
+    .extentionDL{
+        color: #FFFFFF;
+        background-color: #444447;
+    }
+
     /* ↓placeholderを白に */
     ::placeholder {color: #ffffff;}::-ms-input-placeholder{color: #ffffff;}:-ms-input-placeholder{color: #ffffff;}
+}
+
+.extentionDL{
+    margin: 3vw;
+    padding: 2vw;
+
+    text-align: left;
+    width: fit-content;
+}
+
+.extentionDL img{
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+}
+
+.extentionFlex{
+    display: flex;
+}
+
+.extentionFlex *{
+    padding-right: 3vw;
 }
