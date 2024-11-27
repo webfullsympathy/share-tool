@@ -31,7 +31,7 @@
 |Linux|[未完成]()|なし|
 |Chrome拡張機能|[ダウンロード](https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh)|自動アップデートあり|
 |Firefox拡張機能|[ダウンロード](https://addons.mozilla.org/ja/firefox/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/)|自動アップデートあり|
-|VisiOS|[ダウンロード](https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp)|※常に最新版です。|
+|VisiOS|[ダウンロード](https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp)|※常に最新版です。<br>[ダウンロード方法はこちら](https://github.com/webfullsympathy/webfullsympathy/blob/main/post/visios/app_download.md)|
 |PWA|[ダウンロード](https://share-tool.net)|※共有ボタンの下にある<br>インストールバナーをクリック|
 
 # お知らせ
