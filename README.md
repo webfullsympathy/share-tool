@@ -51,7 +51,7 @@
 # お問い合わせ先
 
 # ウェブ完理(管理者)
-お問い合わせは[このリンク](https://lit.link/webfullsympathy)にウェブ完理のSNSを全て表記しています。
+お問い合わせは[このリンク](https://link.webfullsympathy.com)にウェブ完理のSNSを全て表記しています。
 また、すべてのSNSでDMを解放しているのでお気軽にお問い合わせください。GitHubでのIssuesでもお問い合わせが可能です。
 
 # うまいだんご(共同編集者)
