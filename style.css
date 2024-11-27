@@ -175,6 +175,8 @@
     .extentionDL{
         color: #FFFFFF;
         background-color: #444447;
+        border-radius: 10px;   
+        
     }
 
     /* ↓placeholderを白に */
