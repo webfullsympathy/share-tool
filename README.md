@@ -4,7 +4,7 @@
 
 ![スクリーンショット](./image.png)
 
-共有ツール for Browserは、現状の[Web上で動作している共有ツール](https://share-tool.vercel.app/)をChrome拡張機能にしたものです。
+共有ツール for Browserは、現状の[Web上で動作している共有ツール](https://share-tool.net)をChrome拡張機能にしたものです。
 
 画面構成や使い勝手はほぼ同じですが、内部処理はほぼ新規で作っており、新たにBulmaとFontAwesomeを使用しています。
 
