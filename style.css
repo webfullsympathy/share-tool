@@ -199,6 +199,29 @@
     margin: 0;
 }
 
+#download_ex_img{
+  background: #ffbd59;
+  display: inline-block;
+  padding-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+}
+
+
+#download_ex_img:hover{
+    background: #ffbd59;
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    opacity: 0.9;
+    transform: translateX(10px);
+  }
+
+  
+
 .extentionFlex{
     display: flex;
 }
