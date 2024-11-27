@@ -4,7 +4,7 @@
 
 ![スクリーンショット](./image.png)
 
-共有ツール for Browserは、現状の[Web上で動作している共有ツール](https://share-tool.vercel.app/)をFirefox拡張機能にしたものです。
+共有ツール for Browserは、現状の[Web上で動作している共有ツール](https://share-tool.net)をFirefox拡張機能にしたものです。
 
 ほぼChrome版と同じコードで動いてます。
 
@@ -21,9 +21,12 @@
 
 ## ダウンロード方法について
 
-Firefox Add-ons Storeからインストールが可能です。
+Firefox Addons Storeからインストールが可能です。
 
-[![Firefox Add-ons Store](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/)
+※FloopなどFirefoxベースのブラウザではダウンロードできません。
+　パッケージファイルをダウンロードしてご使用ください。
+
+[![Firefox Addons Store](https://blog.mozilla.org/addons/files/2015/11/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/)
 
 （※アカウントの都合上、名義が共有ツールやウェブ完理さん名義ではなく、小川智也名義での公開となっております。使用上は何も問題ございません。）
 
