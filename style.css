@@ -175,7 +175,8 @@
     .extentionDL{
         color: #FFFFFF;
         background-color: #444447;
-        border-radius: 10px;   
+        border-radius: 10px;  
+        box-shadow: 0px 0px 4px 0px #fff; 
         
     }
 
