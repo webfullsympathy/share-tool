@@ -143,28 +143,37 @@
         <div>
             <ul>
                 <a class="menu_a" href="https://github.com/webfullsympathy/share-tool">
-                    <li>GitHubで見る</li>
+                    <li><img src="src/menu/github.png" class="menuicon" style="border-radius: 100%;"><span>GitHubで見る</span></li>
                 </a>
+                
                 <a class="menu_a" href="https://share-tool.net/embed">
-                    <li>埋め込みコードはこちら</li>
+                    <li><img src="src/menu/code.png" class="menuicon"><span>埋め込みコードはこちら</span></li>
                 </a>
+
                 <a class="menu_a" href="https://share-tool.net/doc">
-                    <li>ドキュメント</li>
+                    <li><img src="src/menu/document.png" class="menuicon"><span>ドキュメント</span></li>
                 </a>
+
                 <a class="menu_a" href="https://lit.link/sharetool">
-                    <li>リンク集</li>
+                    <li><img src="src/menu/link.png" class="menuicon"><span>リンク集</span></li>
                 </a>
+
                 <a class="menu_a" href="https://share-tool.net/dev">
-                    <li>開発者</li>
+                    <li><img src="src/menu/developer.png" class="menuicon"><span>開発者</span></li>
                 </a>
+                
                 <a class="menu_a" href="https://share-tool.net/settings">
-                    <li>設定</li>
+                    <li><img src="src/menu/settings.png" class="menuicon"><span>設定</span></li>
                 </a>
             </ul>
         </div>
     </div>
     <div id="back_menu"></div>
     <style>
+        .menuicon {
+            margin: 0;
+        }
+
         #menu {
             display: inline-block;
             width: 48px;
@@ -214,6 +223,10 @@
         div ul {
             color: #fff;
             list-style: none;
+        }
+
+        li{
+            display: inline-block;
         }
 
         @media (prefers-color-scheme: light) {
@@ -282,7 +295,7 @@
                 <a href="https://share-tool.net/extentions-dl.html"><b><u>今すぐダウンロード！！！！！</u></b></a>
             </p>
             <a href="./extentions-dl.html">
-                <img id="download_ex_img" src="./browser-banner.png" alt="" width="172" style="">
+                <img id="download_ex_img" src="./browser-banner.png" alt="ShareTool for Browser Banner" width="172">
             </a>
             <ul>
                 <li>対応ブラウザ Chrome / Firefox (Chromium・Firefoxベースのブラウザでも使えます)</li>
@@ -290,7 +303,6 @@
         </div>
     </div>
 </div>
-
     <script src="src/cookie_data.js"></script>
 </body>
 
