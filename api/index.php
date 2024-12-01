@@ -5,4 +5,3 @@
     }else{
         echo "https://m.share-tool.net";
     }
-?>

@@ -14,6 +14,7 @@ function resizeWindow(){
         tate = window.outerHeight
         yoko = window.outerWidth
     }
+
     if (tate < yoko){
         location.href = location.href.replace("://m.share-tool.net","://share-tool.net")
     }
