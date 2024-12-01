@@ -56,7 +56,9 @@
         fetch(`https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/doc/${path}.md`)
             .then(res => res.text())
             .then(text => {
-                const metadata = parseFrontMatter(text);
+                const frontMatterEnd = text.indexOf('---', 4) + 3;
+                const metadata = parseFrontMatter(text.slice(0, frontMatterEnd));
+                text = text.slice(frontMatterEnd).trim();
                 if (metadata.title) {
                     document.title = metadata.title + " - 共有ツールDocs";
                     document.getElementById('title').innerHTML = " - " + metadata.title;
