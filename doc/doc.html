@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>共有ツールDocs</title>
+    <script src="https://m.share-tool.net/src/device.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: "Noto Sans JP", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app p-6 content">
+        <h1 class="title">共有ツールDocs</h1>
+        <h2 id="title" class="subtitle"></h2>
+        <div class="container">
+            <a href="/doc/" class="button">Docsホーム</a>
+            <a href="/" class="button">共有ツールへ戻る</a>
+        </div>
+        <hr>
+        <div id="content"></div>
+    </div>
+    <footer class="footer has-text-centered">
+        <p>© 2024 共有ツール ウェブ完理・うまいだんご・小川 智也</p>
+    </footer>
+    <script>
+        function parseFrontMatter(markdown) {
+            const frontMatterMatch = markdown.match(/^---\n([\s\S]+?)\n---/);
+            if (!frontMatterMatch) return {};
+            const frontMatter = frontMatterMatch[1];
+            const lines = frontMatter.split('\n');
+            const metadata = {};
+            lines.forEach(line => {
+                const [key, value] = line.split(/:\s*/);
+                if (key && value) {
+                    metadata[key.trim()] = value.trim().replace(/^"(.*)"$/, '$1'); // 文字列をクオートから解除
+                }
+            });
+            return metadata;
+        }
+
+        const url = new URL(window.location.href);
+        const path = url.searchParams.get('id');
+        if(!path){location.href = "/doc/";}
+        const doc = document.getElementById('content');
+        fetch(`https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/doc/${path}.md`)
+            .then(res => res.text())
+            .then(text => {
+                const frontMatterEnd = text.indexOf('---', 4) + 3;
+                const metadata = parseFrontMatter(text.slice(0, frontMatterEnd));
+                text = text.slice(frontMatterEnd).trim();
+                if (metadata.title) {
+                    document.title = metadata.title + " - 共有ツールDocs";
+                    document.getElementById('title').innerHTML = " - " + metadata.title;
+                }
+                doc.innerHTML = marked.parse(text);
+            });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var links = document.querySelectorAll("a[href^='http']:not([href*='" + window.location.hostname + "'])");
+            links.forEach(function (link) {
+                link.setAttribute('target', '_new');
+            });
+        });
+    </script>
+</body>
+
+</html>
