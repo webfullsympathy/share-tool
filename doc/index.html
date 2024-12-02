@@ -98,21 +98,31 @@
     </div>
 
     <script>
-        const content = document.getElementById('contentList');
-        fetch(`https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/doclist.json`)
-            .then(res => res.text())
-            .then(text => {
-                const json = JSON.parse(text);
-                json.forEach(item => {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.textContent = item.title;
-                    a.href = `/doc/doc.html?id=${item.url}`;
-                    li.appendChild(a);
-                    content.appendChild(li);
-                });
-                console.log(json)
-            });
+        const locURL = new URL(location.href)
+        if(locURL.searchParams.get("id") === null){
+            const content = document.getElementById('contentList');
+            fetch(`https://raw.githubusercontent.com/webfullsympathy/sharetool-doc/refs/heads/main/doclist.json`)
+                .then(res => res.text())
+                .then(text => {
+                    //ドキュメントが指定されてないときのやつ
+                    const json = JSON.parse(text);
+                    json.forEach(item => {
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.textContent = item.title;
+                        a.href = `/doc?id=${item.url}`;
+                        li.appendChild(a);
+                        content.appendChild(li);
+                    });
+                    console.log(json)
+                })
+        }else{
+            //ドキュメントが指定されてるときのやつ
+            fetch("https://share-tool.net/doc/docpage.txt")
+            .then(response =>{
+                document.getElementsByTagName("html").innerHTML = response
+            })
+        }
     </script>
 
     <footer class="footer has-text-centered">
