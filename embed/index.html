@@ -69,30 +69,52 @@
     <div style="background: none;display: block;height: 3vh;position: unset;"></div>
     <div id="menu_window" style="display: none;">
         <h3 style="margin-left: -25px;">
-            <span src="https://share-tool.net/menu.svg" id="menu" onclick="menu_close()" style="font-size: 32px;vertical-align: 25%;">✕</span>
+            <span src="menu.svg" id="menu" onclick="menu_close()" style="font-size: 32px;vertical-align: 25%;">✕</span>
             Share Tool Menu
         </h3>
         <div>
             <ul>
-                <a class="menu_a" href="https://github.com/webfullsympathy/share-tool"><li>GitHubで見る</li></a>
-                <a class="menu_a" href="https://share-tool.net/embed"><li>埋め込みコードはこちら</li></a>
-                <a class="menu_a" href="https://share-tool.net/doc"><li>ドキュメント</li></a>
-                <a class="menu_a" href="https://lit.link/sharetool"><li>リンク集</li></a>
-                <a class="menu_a" href="https://share-tool.net/dev"><li>開発者</li></a>
-                <a class="menu_a" href="https://share-tool.net/settings"><li>設定</li></a>
+                <a class="menu_a" href="https://github.com/webfullsympathy/share-tool">
+                    <li><span><img src="src/menu/github.png" class="menuicon" style="border-radius: 100%;">GitHubで見る</span></li>
+                </a>
+                <br>
+                <a class="menu_a" href="https://share-tool.net/embed">
+                    <li><span><img src="src/menu/code.png" class="menuicon">埋め込みコードはこちら</span></li>
+                </a>
+                <br>
+                <a class="menu_a" href="https://share-tool.net/doc">
+                    <li><span><img src="src/menu/document.png" class="menuicon">ドキュメント</span></li>
+                </a>
+                <br>
+                <a class="menu_a" href="https://lit.link/sharetool">
+                    <li><span><img src="src/menu/link.png" class="menuicon">リンク集</span></li>
+                </a>
+                <br>
+                <a class="menu_a" href="https://share-tool.net/dev">
+                    <li><span><img src="src/menu/developer.png" class="menuicon">開発者</span></li>
+                </a>
+                <br>
+                <a class="menu_a" href="https://share-tool.net/settings">
+                    <li><span><img src="src/menu/settings.png" class="menuicon">設定</span></li>
+                </a>
             </ul>
         </div>
     </div>
     <div id="back_menu"></div>
     <style>
-        #menu{
+        .menuicon {
+            width: 10px;
+            vertical-align: middle;
+        }
+
+        #menu {
             display: inline-block;
             width: 48px;
             vertical-align: -46%;
             cursor: pointer;
         }
 
-        #menu_window{
+        #menu_window {
             display: none;
             border-radius: 10px;
             box-shadow: 0px 0px 10px 2px #fff;
@@ -100,11 +122,11 @@
             position: fixed;
             top: 30px;
             width: 60%;
-            background:#fff;
+            background: #fff;
             z-index: 5;
-            }
+        }
 
-        #back_menu{
+        #back_menu {
             z-index: 4;
             background: #000;
             opacity: 0.8;
@@ -116,7 +138,7 @@
             display: none;
         }
 
-        #header{
+        #header {
             background: #ffffff2e;
             padding-left: 15px;
             margin-left: -10px;
@@ -131,30 +153,34 @@
             margin-bottom: 50px;
         }
 
-        div ul{
-            color:#fff;
+        div ul {
+            color: #fff;
             list-style: none;
         }
 
-        @media (prefers-color-scheme: light) {
-        .menu_open{
-            mix-blend-mode: difference;
+        li{
+            display: inline-block;
         }
 
-        .menu_a{
-            mix-blend-mode: difference;
-        }
+        @media (prefers-color-scheme: light) {
+            .menu_open {
+                mix-blend-mode: difference;
+            }
+
+            .menu_a {
+                mix-blend-mode: difference;
+            }
         }
     </style>
     <script>
-        function menu_open(){
+        function menu_open() {
             const menubar = document.getElementById("menu_window");
             const back = document.getElementById("back_menu");
             menubar.style.display = "block";
             back.style.display = "block";
         }
 
-        function menu_close(){
+        function menu_close() {
             const menubar = document.getElementById("menu_window");
             const back = document.getElementById("back_menu");
             menubar.style.display = "none";
