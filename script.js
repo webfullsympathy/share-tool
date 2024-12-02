@@ -81,3 +81,21 @@ function submit(){
         console.log("Linkedinの共有ページを新しいタブで開きました")
     }
 }
+
+
+
+
+if(menu_window.style.display == "none"){
+    menu.style.display = "block";
+    menu.style.animation = "0.3s updown-anime";
+
+  }
+  else if(menu_window.style.display == "block"){
+    menu_window.style.animation = "0.3s downup-anime";
+
+    setTimeout(() => {
+      menu_window.style.display = "none";
+    }, 180);
+
+  }
+  
