@@ -1,3 +1,6 @@
+
+
+
 // ?text=の処理
 window.addEventListener("load",function(){
     let url = new URL(location.href);
@@ -83,19 +86,3 @@ function submit(){
 }
 
 
-
-
-if(menu_window.style.display == "none"){
-    menu.style.display = "block";
-    menu.style.animation = "0.3s updown-anime";
-
-  }
-  else if(menu_window.style.display == "block"){
-    menu_window.style.animation = "0.3s downup-anime";
-
-    setTimeout(() => {
-      menu_window.style.display = "none";
-    }, 180);
-
-  }
-  

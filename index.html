@@ -246,13 +246,20 @@
             const back = document.getElementById("back_menu");
             menubar.style.display = "block";
             back.style.display = "block";
+            menu_window.style.animation = "0.3s updown-anime";
         }
 
         function menu_close() {
             const menubar = document.getElementById("menu_window");
             const back = document.getElementById("back_menu");
-            menubar.style.display = "none";
+            
+            menu_window.style.animation = "0.3s downup-anime";
+
+            setTimeout(() => {
+            menu_window.style.display = "none";
+            }, 180);
             back.style.display = "none";
+            
         }
     </script>
     <!--ここまでメニュー-->
@@ -305,6 +312,13 @@
     </div>
 </div>
     <script src="src/cookie_data.js"></script>
+    <script>
+
+  
+
+
+  
+    </script>
 </body>
 
 </html>
