@@ -1,3 +1,6 @@
+
+
+
 // ?text=の処理
 window.addEventListener("load",function(){
     let url = new URL(location.href);
@@ -81,3 +84,5 @@ function submit(){
         console.log("Linkedinの共有ページを新しいタブで開きました")
     }
 }
+
+
