@@ -57,7 +57,9 @@
 [こちら](https://flawless-pancake-f2b.notion.site/1166e1c012538078af71d00a6849647b)から制作者本人のお知らせを確認できます。
 
 # 使用ライブラリ
-・[PWA-ASSET-GENERATOR](https://www.npmjs.com/package/pwa-asset-generator)
+・[PWA Asset Generator](https://github.com/elegantapp/pwa-asset-generator)
+
+・[Marked.js](https://github.com/markedjs/marked)
 
 # リンク集
 リンク集は[こちら](https://lit.link/sharetool)
