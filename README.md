@@ -1,15 +1,29 @@
 # 共有ツール
-![プログラミング言語](https://skillicons.dev/icons?i=js)![プログラミング言語](https://skillicons.dev/icons?i=html)![プログラミング言語](https://skillicons.dev/icons?i=css)![プログラミング言語](https://skillicons.dev/icons?i=php)
 
-![使用アプリ](https://skillicons.dev/icons?i=discord)![使用アプリ](https://skillicons.dev/icons?i=notion)
+## 使用言語
 
-![使用ツール](https://skillicons.dev/icons?i=electron)![使用ツール](https://skillicons.dev/icons?i=git)![使用ツール](https://skillicons.dev/icons?i=github)![使用ツール](https://skillicons.dev/icons?i=vscode)
+[![プログラミング言語](https://skillicons.dev/icons?i=html)](https://wikipedia.org/wiki/HyperText_Markup_Language)
+[![プログラミング言語](https://skillicons.dev/icons?i=css)](https://wikipedia.org/wiki/Cascading_Style_Sheets)
+[![プログラミング言語](https://skillicons.dev/icons?i=js)](https://wikipedia.org/wiki/JavaScript)
+[![プログラミング言語](https://skillicons.dev/icons?i=php)](https://wikipedia.org/wiki/PHP)
+
+## 使用アプリ
+
+[![使用アプリ](https://skillicons.dev/icons?i=discord)](https://discord.com)
+[![使用アプリ](https://skillicons.dev/icons?i=notion)](https://notion.so/)
+
+## 使用ツール
+
+[![使用ツール](https://skillicons.dev/icons?i=electron)](https://electronjs.org)
+[![使用ツール](https://skillicons.dev/icons?i=git)](https://git-scm.com/)
+[![使用ツール](https://skillicons.dev/icons?i=github)](https://github.com)
+[![使用ツール](https://skillicons.dev/icons?i=vscode)](https://code.visualstudio.com/)
 
 >[!CAUTION]
->このツールで起きた事故などに制作者である[ウェブ完理](https://webfullsympathy.github.io)は一切責任を負いません。
+>このツールで起きた事故などに開発者は一切責任を負いません。
 
 # 説明
-アプリ内にあるHTMLコードを自サイトに貼りつけるだけで様々サービスに対応した共有ボタンを<span style="font-size: 130%;">一つで</span>作ることが出来ます。
+アプリ内にあるHTMLコードを自サイトに貼りつけるだけで様々サービスに対応した共有ボタンを一つで作ることが出来ます。
 
 # 使い方
 [アプリ](https://share-tool.net)を開くと共有画面が出てきます。
