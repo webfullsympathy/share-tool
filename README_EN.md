@@ -1,4 +1,6 @@
-# Sharing Tools
+# ShareTool
+
+[日本語版はこちら](https://github.com/webfullsympathy/share-tool/blob/main/README.md)
 
 ## Languages Used
 
