@@ -43,7 +43,7 @@
                 location.href = "https://share-tool.net"
             }
 
-            if(locURL.searchParams("file") === null){
+            if(locURL.searchParams.get("file") === null){
                 alert("ファイルが指定されていません。\nURLにfile=ファイル名を追加してください。\n例:file=index.html")
                 history.back()
                 location.href = "https://share-tool.net"
@@ -61,7 +61,7 @@
                 try{
                     JSZip.loadAsync(data)
                         .then(function(zip) {
-                            zip.file(locURL.searchParams("file")).async("string")
+                            zip.file(locURL.searchParams.get("file")).async("string")
                                 .then(function(fileData) {
                                     document.getElementsByTagName("html").innerHTML = fileData
                                 })
