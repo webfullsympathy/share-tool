@@ -1,5 +1,7 @@
 # 共有ツール
 
+[Engrish Here](https://github.com/webfullsympathy/share-tool/blob/main/README_EN.md)
+
 ## 使用言語
 
 [![プログラミング言語](https://skillicons.dev/icons?i=html)](https://wikipedia.org/wiki/HyperText_Markup_Language)
