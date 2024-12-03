@@ -40,9 +40,9 @@ You can use it by clicking on "Click here for the embed code" in the footer and 
 # Download
 |OS/Type|Link|Notes|
 |-|-|-|
-|Windows|[Incomplete]()|None|
-|Mac|[Incomplete]()|None|
-|Linux|[Incomplete]()|None|
+|Windows|[Uncomplete]()|None|
+|Mac|[Uncomplete]()|None|
+|Linux|[Uncomplete]()|None|
 |Chrome Extension|[Download](https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh)|Automatic updates available|
 |Firefox Extension|[Download](https://addons.mozilla.org/ja/firefox/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/)|Automatic updates available|
 |VisiOS|[Download](https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp)|*Always the latest version.<br>[Click here for download instructions](https://github.com/webfullsympathy/webfullsympathy/blob/main/post/visios/app_download.md)|
