@@ -4,14 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>バージョン指定 | 共有ツール</title>
+    <script src="https://raw.githubusercontent.com/Stuk/jszip/refs/heads/main/dist/jszip.min.js"></script>
 </head>
 <body>
     <script>
         const locURL = new URL(location.href)
         if(locURL.searchParams.get("sion") != null){
+            // パラメータ指定がされているとき
+            const version = locURL.searchParams.get("sion")
+            console.log("指定されたバージョン:" + version)
 
+            // zipファイルをダウンロードする処理
+            const trueVersion = [
+                "v1.0",
+                "v2.0",
+                "v2.0.1",
+                "v2.1",
+                "v2.2",
+                "v3.0",
+                "v3.0.1",
+                "v3.5",
+                "v3.5.1",
+                "v3.5.2",
+                "v3.5.3",
+                "v4.0",
+                "v4.1",
+                "v4.5",
+                "v4.5.1",
+                "v5.0",
+                "v6.0",
+                "v6.0.1",
+                "v6.1",
+            ]
+
+            if(trueVersion.indexOf(version) === -1){
+                alert("正しいバージョンが指定されませんでした。\n最初にvを付けてバージョン数を半角で書いてください。\n例:v1.0")
+                history.back()
+                location.href = "https://share-tool.net"
+            }
+
+            if(locURL.searchParams("file") === null){
+                alert("ファイルが指定されていません。\nURLにfile=ファイル名を追加してください。\n例:file=index.html")
+                history.back()
+                location.href = "https://share-tool.net"
+            }
+
+            const path = "https://github.com/webfullsympathy/share-tool/archive/refs/tags/" + version + ".zip"
+
+            // ZIP読み込み
+            JSZipUtils.getBinaryContent(path, function(err, data) {
+                if (err) {
+                    throw err
+                }
+
+                // ファイル読み込み
+                try{
+                    JSZip.loadAsync(data)
+                        .then(function(zip) {
+                            zip.file(locURL.searchParams("file")).async("string")
+                                .then(function(fileData) {
+                                    document.getElementsByTagName("html").innerHTML = fileData
+                                })
+                            })
+                }catch(error){
+                    alert("ファイルの読み込み中にエラーが発生しました。\nファイルが正しく指定されてないなどが考えられます。\n例:file=doc/index.htmlがdoc/になっているなど")
+                }
+            })
         }else{
-            
+            // パラメータ指定がされてないとき
+            alert("バージョンが指定されていません。\nfileパラメータに閲覧するファイルを、sionパラメータにバージョンを指定して下さい。")
         }
     </script>
 </body>
