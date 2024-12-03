@@ -1,86 +1,86 @@
-# 共有ツール
+# Sharing Tools
 
-## 使用言語
+## Languages Used
 
-[![プログラミング言語](https://skillicons.dev/icons?i=html)](https://wikipedia.org/wiki/HyperText_Markup_Language)
-[![プログラミング言語](https://skillicons.dev/icons?i=css)](https://wikipedia.org/wiki/Cascading_Style_Sheets)
-[![プログラミング言語](https://skillicons.dev/icons?i=js)](https://wikipedia.org/wiki/JavaScript)
-[![プログラミング言語](https://skillicons.dev/icons?i=php)](https://wikipedia.org/wiki/PHP)
+[![Programming Language](https://skillicons.dev/icons?i=html)](https://wikipedia.org/wiki/HyperText_Markup_Language)
+[![Programming Language](https://skillicons.dev/icons?i=css)](https://wikipedia.org/wiki/Cascading_Style_Sheets)
+[![Programming Language](https://skillicons.dev/icons?i=js)](https://wikipedia.org/wiki/JavaScript)
+[![Programming Language](https://skillicons.dev/icons?i=php)](https://wikipedia.org/wiki/PHP)
 
-## 使用アプリ
+## Applications Used
 
-[![使用アプリ](https://skillicons.dev/icons?i=discord)](https://discord.com)
-[![使用アプリ](https://skillicons.dev/icons?i=notion)](https://notion.so/)
+[![Used App](https://skillicons.dev/icons?i=discord)](https://discord.com)
+[![Used App](https://skillicons.dev/icons?i=notion)](https://notion.so/)
 
-## 使用ツール
+## Tools Used
 
-[![使用ツール](https://skillicons.dev/icons?i=electron)](https://electronjs.org)
-[![使用ツール](https://skillicons.dev/icons?i=git)](https://git-scm.com/)
-[![使用ツール](https://skillicons.dev/icons?i=github)](https://github.com)
-[![使用ツール](https://skillicons.dev/icons?i=vscode)](https://code.visualstudio.com/)
+[![Used Tool](https://skillicons.dev/icons?i=electron)](https://electronjs.org)
+[![Used Tool](https://skillicons.dev/icons?i=git)](https://git-scm.com/)
+[![Used Tool](https://skillicons.dev/icons?i=github)](https://github.com)
+[![Used Tool](https://skillicons.dev/icons?i=vscode)](https://code.visualstudio.com/)
 
 >[!CAUTION]
->このツールで起きた事故などに開発者は一切責任を負いません。
+>The developers bear no responsibility for any accidents that occur with this tool.
 
-# 説明
-アプリ内にあるHTMLコードを自サイトに貼りつけるだけで様々サービスに対応した共有ボタンを一つで作ることが出来ます。
+# Description
+You can create a shared button compatible with various services simply by pasting the HTML code found in the app into your own site.
 
-# 使い方
-[アプリ](https://share-tool.net)を開くと共有画面が出てきます。
-フッターにある「埋め込みコードはこちら」をクリックして自身のサイトに貼りつけるだけでご利用できます。
+# How to Use
+When you open the [app](https://share-tool.net), a sharing screen will appear.
+You can use it by clicking on "Click here for the embed code" in the footer and pasting it into your own site.
 
-# 共同編集者様
+# Collaborators
 
-- [ウェブ完理(管理者)](#ウェブ完理管理者)
-- [うまいだんご](#うまいだんご共同編集者)
-- [小川 智也](#小川-智也共同編集者)
+- [Webfullsympathy(Manager)](#WebfullsympathyManager)
+- [Umaidango](#UmaidangoCollaborators)
+- [Tomoya Ogawa](#TomoyaOgawaCollaborators)
 
-[新規開発者申請はこちら！](https://share-tool.net/dev/new)
+[New Developer Application Here!](https://share-tool.net/dev/new)
 
-# ダウンロード
-|OS/種類|リンク|備考|
+# Download
+|OS/Type|Link|Notes|
 |-|-|-|
-|Windows|[未完成]()|なし|
-|Mac|[未完成]()|なし|
-|Linux|[未完成]()|なし|
-|Chrome拡張機能|[ダウンロード](https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh)|自動アップデートあり|
-|Firefox拡張機能|[ダウンロード](https://addons.mozilla.org/ja/firefox/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/)|自動アップデートあり|
-|VisiOS|[ダウンロード](https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp)|※常に最新版です。<br>[ダウンロード方法はこちら](https://github.com/webfullsympathy/webfullsympathy/blob/main/post/visios/app_download.md)|
-|PWA|[ダウンロード](https://share-tool.net)|※共有ボタンの下にある<br>インストールバナーをクリック|
+|Windows|[Incomplete]()|None|
+|Mac|[Incomplete]()|None|
+|Linux|[Incomplete]()|None|
+|Chrome Extension|[Download](https://chromewebstore.google.com/detail/folhpgnfkkbpgchbambnjdkaaleaefgh)|Automatic updates available|
+|Firefox Extension|[Download](https://addons.mozilla.org/ja/firefox/addon/%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB-share-tool/)|Automatic updates available|
+|VisiOS|[Download](https://github.com/webfullsympathy/share-tool/releases/download/v3.5/share-tool.visiapp)|*Always the latest version.<br>[Click here for download instructions](https://github.com/webfullsympathy/webfullsympathy/blob/main/post/visios/app_download.md)|
+|PWA|[Download](https://share-tool.net)|*Click the<br>install banner under the share button|
 
-# お知らせ
+# Notice
 
-## X(旧Twitter)でのお知らせ
-[こちら](https://x.com/search?q=%23%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB_%E3%82%A6%E3%82%A7%E3%83%96%E5%AE%8C%E7%90%86)から制作グループのみのお知らせを確認できます。
+## Announcement on X (formerly Twitter)
+You can check announcements from the production group [here](https://x.com/search?q=%23%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB_%E3%82%A6%E3%82%A7%E3%83%96%E5%AE%8C%E7%90%86).
 
-## お知らせページ
-[こちら](https://flawless-pancake-f2b.notion.site/1166e1c012538078af71d00a6849647b)から制作者本人のお知らせを確認できます。
+## Announcement Page
+You can check announcements from the creator [here](https://flawless-pancake-f2b.notion.site/1166e1c012538078af71d00a6849647b).
 
-# 使用ライブラリ
+# Libraries Used
 ・[PWA Asset Generator](https://github.com/elegantapp/pwa-asset-generator)
 
 ・[Marked.js](https://github.com/markedjs/marked)
 
-# リンク集
-リンク集は[こちら](https://lit.link/sharetool)
+# Link Collection
+The link collection is [here](https://lit.link/sharetool)
 
-# お問い合わせ先
+# Contact Information
 
-# ウェブ完理(管理者)
-お問い合わせは[このリンク](https://link.webfullsympathy.com)にウェブ完理のSNSを全て表記しています。
-また、すべてのSNSでDMを解放しているのでお気軽にお問い合わせください。GitHubでのIssuesでもお問い合わせが可能です。
+# Webfullsympathy(Manager)
+For inquiries, all of the web manager's social media accounts are listed at [this link](https://link.webfullsympathy.com).
+Additionally, DMs are open on all social media, so feel free to reach out. You can also contact us through Issues on GitHub.
 
-# うまいだんご(共同編集者)
-・[ホームページ](https://umaidango.github.io/me/)
+# Umaidango(Collaborators)
+・[Homepage](https://umaidango.github.io/me/)
 
-・[X(旧Twitter)](https://x.com/dango12_dango)
+・[X (formerly Twitter)](https://x.com/dango12_dango)
 
-# 小川 智也(共同編集者)
+# TomoyaOgawa(Collaborators)
 
 - [Tomoyan's Blog](https://ogatomo.net)
-- [X(旧Twitter)](https://x.com/ogatomo21)
+- [X (formerly Twitter)](https://x.com/ogatomo21)
 - [GitHub](https://github.com/ogatomo21)
 
-## 制作者：[ウェブ完理](https://webfullsympathy.github.io/)
-## 共同編集者: [うまいだんご](https://umaidango.github.io/me/)
-## 共同編集者: [小川 智也](https://ogatomo.net)
+## Creator: [Webfullsympathy](https://webfullsympathy.github.io/)
+## Collaborators: [Umaidango](https://umaidango.github.io/me/)
+## Collaborators: [Tomoya Ogawa](https://ogatomo.net)
