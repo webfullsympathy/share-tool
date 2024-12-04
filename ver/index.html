@@ -8,6 +8,8 @@
 </head>
 <body>
     <script>
+        document.addEventListener("DOMContentLoaded",() => {
+            
         const locURL = new URL(location.href)
         if(locURL.searchParams.get("sion") != null){
             // パラメータ指定がされているとき
@@ -74,6 +76,8 @@
             // パラメータ指定がされてないとき
             alert("バージョンが指定されていません。\nfileパラメータに閲覧するファイルを、sionパラメータにバージョンを指定して下さい。")
         }
+
+        })
     </script>
 </body>
 </html>
