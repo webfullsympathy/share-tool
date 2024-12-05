@@ -52,16 +52,16 @@ You can use it by clicking on "Click here for the embed code" in the footer and 
 
 # Notice
 
-## Announcement on X (formerly Twitter)
+## Notice on X(formerly Twitter)
 You can check announcements from the production group [here](https://x.com/search?q=%23%E5%85%B1%E6%9C%89%E3%83%84%E3%83%BC%E3%83%AB_%E3%82%A6%E3%82%A7%E3%83%96%E5%AE%8C%E7%90%86).
 
 ## Announcement Page
 You can check announcements from the creator [here](https://flawless-pancake-f2b.notion.site/1166e1c012538078af71d00a6849647b).
 
 # Libraries Used
-・[PWA Asset Generator](https://github.com/elegantapp/pwa-asset-generator)
+- [PWA Asset Generator](https://github.com/elegantapp/pwa-asset-generator)
 
-・[Marked.js](https://github.com/markedjs/marked)
+- [Marked.js](https://github.com/markedjs/marked)
 
 # Link Collection
 The link collection is [here](https://lit.link/sharetool)
@@ -73,9 +73,9 @@ For inquiries, all of the web manager's social media accounts are listed at [thi
 Additionally, DMs are open on all social media, so feel free to reach out. You can also contact us through Issues on GitHub.
 
 # Umaidango(Collaborators)
-・[Homepage](https://umaidango.github.io/me/)
+- [Homepage](https://umaidango.github.io/me/)
 
-・[X (formerly Twitter)](https://x.com/dango12_dango)
+- [X (formerly Twitter)](https://x.com/dango12_dango)
 
 # TomoyaOgawa(Collaborators)
 
