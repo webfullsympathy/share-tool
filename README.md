@@ -31,6 +31,9 @@
 [アプリ](https://share-tool.net)を開くと共有画面が出てきます。
 フッターにある「埋め込みコードはこちら」をクリックして自身のサイトに貼りつけるだけでご利用できます。
 
+# ???
+https://github.com/webfullsympathy/share-tool/discussions/4
+
 # 共同編集者様
 
 - [ウェブ完理(管理者)](#ウェブ完理管理者)
